@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Jun 2018 pada 03.57
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.0.28
+-- Waktu pembuatan: 06 Jul 2018 pada 21.29
+-- Versi server: 10.1.32-MariaDB
+-- Versi PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `nama` varchar(50) NOT NULL
+  `username` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL,
+  `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -41,19 +41,30 @@ CREATE TABLE `admin` (
 --
 
 CREATE TABLE `cd` (
-  `id` int(20) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `genre` varchar(50) NOT NULL,
-  `negara` varchar(50) NOT NULL,
-  `sutradara` varchar(50) NOT NULL,
-  `tahun` int(50) NOT NULL,
-  `produksi` varchar(50) NOT NULL,
-  `durasi` int(50) NOT NULL,
-  `sinopsis` varchar(50) NOT NULL,
-  `rating` varchar(50) NOT NULL,
-  `status` varchar(40) NOT NULL,
-  `sadk` varchar(40) NOT NULL,
-  `tanggal_rilis` date NOT NULL
+  `id` int(11) NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `genre` int(11) NOT NULL,
+  `sutradara` int(25) NOT NULL,
+  `produksi` varchar(25) NOT NULL,
+  `tanggal_rilis` date NOT NULL,
+  `tahun` year(4) NOT NULL,
+  `negara` int(11) NOT NULL,
+  `durasi` int(11) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `sinopsis` text NOT NULL,
+  `sadk` varchar(25) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `cd_pemain`
+--
+
+CREATE TABLE `cd_pemain` (
+  `id_cd` int(11) NOT NULL,
+  `id_pemain` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -63,12 +74,12 @@ CREATE TABLE `cd` (
 --
 
 CREATE TABLE `customer` (
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `alamat` varchar(100) NOT NULL,
-  `no_hp` int(20) NOT NULL
+  `username` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `alamat` text NOT NULL,
+  `no_hp` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -78,8 +89,8 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `genre` (
-  `id` int(20) NOT NULL,
-  `nama_genre` varchar(50) NOT NULL
+  `id` int(11) NOT NULL,
+  `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -89,8 +100,8 @@ CREATE TABLE `genre` (
 --
 
 CREATE TABLE `negara` (
-  `id` int(40) NOT NULL,
-  `negara` varchar(40) NOT NULL
+  `id` int(11) NOT NULL,
+  `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -100,8 +111,21 @@ CREATE TABLE `negara` (
 --
 
 CREATE TABLE `pemain` (
-  `id` varchar(30) NOT NULL,
-  `nama_pemain` int(40) NOT NULL
+  `id` int(11) NOT NULL,
+  `nama` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `peminjaman`
+--
+
+CREATE TABLE `peminjaman` (
+  `id_transaksi` int(11) NOT NULL,
+  `id_customer` varchar(25) NOT NULL,
+  `id_cd` int(11) NOT NULL,
+  `tanggal_pinjam` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -111,9 +135,10 @@ CREATE TABLE `pemain` (
 --
 
 CREATE TABLE `pengembalian` (
-  `id_transaksi` int(50) NOT NULL,
-  `tanggal_kembali` date NOT NULL,
-  `id_cd` int(50) NOT NULL
+  `id_transaksi` int(11) NOT NULL,
+  `id_customer` varchar(25) NOT NULL,
+  `id_cd` int(11) NOT NULL,
+  `tanggal_kembali` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -123,11 +148,11 @@ CREATE TABLE `pengembalian` (
 --
 
 CREATE TABLE `transaksi` (
-  `id` int(20) NOT NULL,
+  `id` int(11) NOT NULL,
+  `id_customer` varchar(25) NOT NULL,
   `tanggal_pinjam` date NOT NULL,
   `tanggal_kembali` date NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `id_customer` int(50) NOT NULL
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -137,9 +162,8 @@ CREATE TABLE `transaksi` (
 --
 
 CREATE TABLE `transaksi_cd` (
-  `id` int(20) NOT NULL,
-  `transaksi` varchar(20) NOT NULL,
-  `id_cd` int(20) NOT NULL
+  `id_transaksi` int(11) NOT NULL,
+  `id_cd` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -157,6 +181,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `cd`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `cd_pemain`
+--
+ALTER TABLE `cd_pemain`
+  ADD PRIMARY KEY (`id_cd`,`id_pemain`);
 
 --
 -- Indeks untuk tabel `customer`
@@ -183,10 +213,16 @@ ALTER TABLE `pemain`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `peminjaman`
+--
+ALTER TABLE `peminjaman`
+  ADD PRIMARY KEY (`id_transaksi`,`id_customer`,`id_cd`);
+
+--
 -- Indeks untuk tabel `pengembalian`
 --
 ALTER TABLE `pengembalian`
-  ADD PRIMARY KEY (`id_transaksi`);
+  ADD PRIMARY KEY (`id_transaksi`,`id_customer`,`id_cd`);
 
 --
 -- Indeks untuk tabel `transaksi`
@@ -198,7 +234,7 @@ ALTER TABLE `transaksi`
 -- Indeks untuk tabel `transaksi_cd`
 --
 ALTER TABLE `transaksi_cd`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_transaksi`,`id_cd`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
