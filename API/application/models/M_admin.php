@@ -31,4 +31,20 @@ class M_admin extends CI_Model{
     	}
     	return "ERROR";
     }
+    public function login($username,$password){
+        if(isset($username)){
+            if(isset($password)){
+                $data = $this->db->where('username',$username)->get($this->table)->result();
+                if($data != NULL){
+                    if($data[0]->password==$password){
+                        return "GOOD";
+                    }
+                    return "Wrong Password";
+                }
+                return "Wrong Username";
+            }
+            return "Password Not Set";
+        }
+        return "Username Not Set";
+    }
 }

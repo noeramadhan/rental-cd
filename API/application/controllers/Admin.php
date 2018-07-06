@@ -25,7 +25,10 @@ class Admin extends REST_Controller {
     }
 
     public function login_get(){
-        echo "LOGIN";
+        $username = $this->get('username');
+        $password = $this->get('password');
+        $admin = $this->m_admin->login($username,$password);
+        $this->response($admin,200);
     }
 
     // update admin
