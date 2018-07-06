@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class M_customer extends CI_Model{
-    private $table = "customers";
+    private $table = "customer";
     
     public function create($data){
     	if(isset($data)){

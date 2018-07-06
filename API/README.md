@@ -4,25 +4,27 @@
 
 
 
-
-
-
 URI
 ===
+
+
+
+
+
 - /api/admin/
 - /api/admin/id/
-- /api/customers/
-- /api/customers/id/
-- /api/cds/
-- /api/cds/id/
-- /api/cds/genre/id/
-- /api/cds/negara/id/
-- /api/cds/tahun/id/
-- /api/cds/pemain/id/
-- /api/transactions/
-- /api/transactions/id/
-- /api/transactions/customer/id
-- /api/transactions/peminjaman/
-- /api/transactions/peminjaman/id/
-- /api/transactions/pengembalian/
-- /api/transactions/pengembalian/id/
+- /api/customer/
+- /api/customer/id/
+- /api/cd/
+- /api/cd/id/
+- /api/cd/genre/id/
+- /api/cd/negara/id/
+- /api/cd/tahun/id/
+- /api/cd/pemain/id/
+- /api/transaction/
+- /api/transaction/id/
+- /api/transaction/customer/id
+- /api/transaction/peminjaman/
+- /api/transaction/peminjaman/id/
+- /api/transaction/pengembalian/
+- /api/transaction/pengembalian/id/

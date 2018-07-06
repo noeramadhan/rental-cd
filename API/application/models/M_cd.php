@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class M_cd extends CI_Model{
-    private $table = "cds";
+    private $table = "cd";
     
     public function create($data){
     	if(isset($data)){

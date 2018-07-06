@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class M_transaction extends CI_Model{
-    private $table = "transaksi";
+class M_admin extends CI_Model{
+    private $table = "admin";
     
     public function create($data){
     	if(isset($data)){
@@ -9,9 +9,9 @@ class M_transaction extends CI_Model{
     	}
     	return "ERROR";
     }
-    public function read($id){
-    	if(isset($id)){
-    		$this->db->where('id',$id)->get($this->table);
+    public function read($username){
+    	if(isset($username)){
+    		$data = $this->db->where('username',$username)->get($this->table);
     	}else{
     		$data = $this->db->get($this->table);
     	}

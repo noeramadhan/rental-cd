@@ -7,7 +7,7 @@ class Customer extends REST_Controller {
     function __construct($config = 'rest') {
         parent::__construct($config);
         
-        $this->load->model(array('m_customers'));
+        $this->load->model(array('m_customer'));
     }
 
     // create customer
