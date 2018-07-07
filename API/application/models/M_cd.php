@@ -14,10 +14,10 @@ class M_cd extends CI_Model{
     	return "ERROR";
     }
     public function read($id,$keyword){
-
         if(isset($id)){
             if(isset($keyword)){
-
+                // return $this->db->where()
+                return "GOOD";
             }else{
                 return $this->db->where('id',$id)->get($this->cd)->result();
             }
