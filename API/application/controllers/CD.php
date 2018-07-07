@@ -19,8 +19,9 @@ class CD extends REST_Controller {
 
     // view all or one cds
     public function cd_get(){
-    	$id = $this->get('id');
-    	$cd = $this->m_cd->read($id);
+    	$key = $this->get('k');
+        $query = $this->get('q');
+    	$cd = $this->m_cd->read($key,$query);
     	$this->response($cd,200);
     }
 

@@ -9,23 +9,23 @@ class M_customer extends CI_Model{
     	}
     	return "ERROR";
     }
-    public function read($id){
-    	if(isset($id)){
-    		$this->db->where('id',$id)->get($this->table);
+    public function read($username){
+    	if(isset($username)){
+    		$this->db->where('username',$username)->get($this->table);
     	}else{
     		$data = $this->db->get($this->table);
     	}
     	return $data->result();
     }
-    public function update($id,$data){
-    	if(isset($id) && isset($data)){
+    public function update($username,$data){
+    	if(isset($username) && isset($data)){
     		return $this->db->update($this->table,$data);
     	}
     	return "ERROR";
     }
-    public function delete($id){
-    	if(isset($id)){
-    		return $this->db->where('id',$id)->delete($this->table);
+    public function delete($username){
+    	if(isset($username)){
+    		return $this->db->where('username',$username)->delete($this->table);
     	}else{
     		return $this->db->delete($this->table);
     	}
