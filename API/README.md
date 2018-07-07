@@ -1,18 +1,9 @@
-
-
-
-
-
-
+```txt
 URI
 ===
-
-
-
-
-
 - /api/admin/
-- /api/admin/id/
+- /api/admin/username/
+- /api/admin/login/
 - /api/customer/
 - /api/customer/id/
 - /api/cd/
@@ -28,3 +19,4 @@ URI
 - /api/transaction/peminjaman/id/
 - /api/transaction/pengembalian/
 - /api/transaction/pengembalian/id/
+```
