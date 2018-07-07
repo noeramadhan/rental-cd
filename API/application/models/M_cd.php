@@ -17,6 +17,7 @@ class M_cd extends CI_Model{
         if(isset($id)){
             if(isset($keyword)){
                 // return $this->db->where()
+                
                 return "GOOD";
             }else{
                 return $this->db->where('id',$id)->get($this->cd)->result();
