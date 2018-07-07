@@ -14,14 +14,16 @@ class M_cd extends CI_Model{
     	return "ERROR";
     }
     public function read($id,$keyword){
-        if(isset($id)){
-            if(isset($keyword)){
-                // return $this->db->where()
-                
-                return "GOOD";
-            }else{
-                return $this->db->where('id',$id)->get($this->cd)->result();
+        if(isset($keyword)){
+            if($keyword=='genre'){
+                return $this->db->select('*')->from('cd')->join('genre','genre.id=cd.id')->join('negara','negara.id=cd.id')->where('genre.id',$id)->get()->result();
+            }else if($keyword=='negara'){
+                return $this->db->select('*')->from('cd')->join('genre','genre.id=cd.id')->join('negara','negara.id=cd.id')->where('negara.id',$id)->get()->result();
+            }else if($keyword=='tahun'){
+                return $this->db->select('*')->from('cd')->join('genre','genre.id=cd.id')->join('negara','negara.id=cd.id')->where('tahun',$id)->get()->result();
             }
+        }else if(isset($id)){
+            return $this->db->where('id',$id)->get($this->cd)->result();
         }
         return $this->db->get($this->cd)->result();
     }
