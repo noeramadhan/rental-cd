@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Jul 2018 pada 21.29
+-- Waktu pembuatan: 07 Jul 2018 pada 06.24
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 7.2.5
 
@@ -34,6 +34,14 @@ CREATE TABLE `admin` (
   `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`, `nama`) VALUES
+('admin', 'admin', 'admin'),
+('user', 'user', 'user');
+
 -- --------------------------------------------------------
 
 --
@@ -52,7 +60,7 @@ CREATE TABLE `cd` (
   `durasi` int(11) NOT NULL,
   `rating` int(11) NOT NULL,
   `sinopsis` text NOT NULL,
-  `sadk` varchar(25) NOT NULL,
+  `stok` int(11) NOT NULL DEFAULT '0',
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
