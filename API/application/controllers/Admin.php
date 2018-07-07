@@ -10,39 +10,35 @@ class Admin extends REST_Controller {
         $this->load->model(array('m_admin'));
     }
 
-    // create admin
     public function admin_put(){
     	$data = array();
     	$admin = $this->m_admin->create($data);
     	$this->response($admin,200);
     }
 
-    // view all or one admins
     public function admin_get(){
     	$username = $this->get('username');
     	$admin = $this->m_admin->read($username);
     	$this->response($admin,200);
     }
 
-    public function login_get(){
+    public function admin_post(){
+    	$username = $this->post('username');
+        $password = $this->post('password');
+        $name = $this->post('name');
+    	$admin = $this->m_admin->update($username,array($password, $name));
+    	$this->response($data, 200);
+    }
+
+    public function admin_delete(){
+    	$username = $this->delete('username');
+    	$admin = $this->m_admin->delete($username);
+    	$this->response($admin, 200);
+    }
+        public function login_get(){
         $username = $this->get('username');
         $password = $this->get('password');
         $admin = $this->m_admin->login($username,$password);
         $this->response($admin,200);
-    }
-
-    // update admin
-    public function admin_post(){
-    	$id = $this->post('id');
-    	$data = array();
-    	$admin = $this->m_admin->update($id,$data);
-    	$this->response($data, 200);
-    }
-
-    // delete all or one admin
-    public function admin_delete(){
-    	$id = $this->delete('id');
-    	$admin = $this->m_admin->delete($id);
-    	$this->response($admin, 200);
     }
 }
