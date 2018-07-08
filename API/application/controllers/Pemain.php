@@ -35,7 +35,18 @@ class Pemain extends REST_Controller {
     	$this->response($pemain,200);
     }
 
-    // attatch
-    // detatch
+    public function attatch_put(){
+        $id = $this->put('id');
+        $cd = $this->put('cd');
+        $pemain = $this->m_pemain->attatch($id,$cd);
+        $this->response($pemain,200);
+    }
+
+    public function detatch_delete(){
+        $id = $this->delete('id');
+        $cd = $this->delete('cd');
+        $pemain = $this->m_pemain->detatch($id,$cd);
+        $this->response($pemain,200);
+    }
         
 }

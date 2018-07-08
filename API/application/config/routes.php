@@ -69,3 +69,14 @@ $route['transactions/(:any)'] = 'transactions/transaction/id/$1';
 $route['transactions/customer/(:any)'] = 'transactions/customer/username/$1';
 $route['transactions/peminjaman/(:any)'] = 'transactions/peminjaman/id/$1';
 $route['transactions/pengembalian/(:any)'] = 'transactions/pengembalian/id/$1';
+// GENRE ROUTING
+$route['genre'] = 'genre/genre';
+$route['genre/(:any)'] = 'genre/genre/id/$1';
+// NEGARA ROUTING
+$route['negara'] = 'negara/negara';
+$route['negara/(:any)'] = 'negara/negara/id/$1';
+// PEMAIN ROUTING
+$route['pemain'] = 'pemain/pemain';
+$route['pemain/(:any)'] = 'pemain/pemain/id/$1';
+$route['pemain/attatch/(:any)/(:any)'] = 'pemain/attatch/id/$1/cd/$2';
+$route['pemain/detatch/(:any)/(:any)'] = 'pemain/detatch/id/$1/cd/$2';
