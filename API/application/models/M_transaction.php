@@ -12,6 +12,7 @@ class M_transaction extends CI_Model{
     	}
     	return "ERROR";
     }
+    
     public function read($id){
     	if(isset($id)){
     		$this->db->where('id',$id)->get($this->transaction);
@@ -20,12 +21,14 @@ class M_transaction extends CI_Model{
     	}
     	return $data->result();
     }
+
     public function update($id,$data){
     	if(isset($id) && isset($data)){
     		return $this->db->update($this->transaction,$data);
     	}
     	return "ERROR";
     }
+
     public function delete($id){
     	if(isset($id)){
     		return $this->db->where('id',$id)->delete($this->transaction);
@@ -34,31 +37,16 @@ class M_transaction extends CI_Model{
     	}
     	return "ERROR";
     }
-    public function search($username){
 
-    }
-    public function peminjaman_create($data){
+    public function search($username){}
 
-    }
-    public function peminjaman_read($id){
+    public function peminjaman_create($data){}
+    public function peminjaman_read($id){}
+    public function peminjaman_update($id,$data){}
+    public function peminjaman_delete($id){}
 
-    }
-    public function peminjaman_update($id,$data){
-
-    }
-    public function peminjaman_delete($id){
-
-    }
-    public function pengembalian_create($data){
-
-    }
-    public function pengembalian read($id){
-
-    }
-    public function pengembalian_update($id,$data){
-
-    }
-    public function pengembalian_delete($id){
-        
-    }
+    public function pengembalian_create($data){}
+    public function pengembalian read($id){}
+    public function pengembalian_update($id,$data){}
+    public function pengembalian_delete($id){}
 }
