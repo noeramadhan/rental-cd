@@ -16,9 +16,9 @@ class M_cd extends CI_Model{
 
     public function read($id){
         if(isset($id)){
-            $data = $this->db->where('id',$id)->get($this->table);
+            $data = $this->db->where('id',$id)->get($this->cd);
         }else{
-            $data = $this->db->get($this->table);
+            $data = $this->db->get($this->cd);
         }
         return $data->result();
     }

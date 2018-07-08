@@ -55,10 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 // ADMIN ROUTING 
 $route['admins'] = 'admins/admin';
-$route['admins/:(any)'] = 'admins/admin/username/$1';
+$route['admins/(:any)'] = 'admins/admin/username/$1';
 // CUTOMER ROUTING
 $route['customers'] = 'customers/customer';
-$route['customers/(:any'] = 'customers/customer/username/$1';
+$route['customers/(:any)'] = 'customers/customer/username/$1';
 // CD ROUTING
 $route['cds'] = 'cds/cd';
 $route['cds/(:any)'] = 'cds/cd/id/$1';
