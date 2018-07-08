@@ -38,6 +38,12 @@ class M_cd extends CI_Model{
     }
     
     public function search($key,$val){
-        
+        if(isset($key)){
+            if(isset($val)){
+                return $this->db->where($key,$val)->get($this->table)->result();
+            }
+            return "Value Not Set";
+        }
+        return "Key Not Set";
     }
 }

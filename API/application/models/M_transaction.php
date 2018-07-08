@@ -38,15 +38,68 @@ class M_transaction extends CI_Model{
     	return "ERROR";
     }
 
-    public function search($username){}
+    public function search($username){
+        if(isset($username)){
+            return $this->db->where('id_customer',$username)->get($this->table)->result();
+        }
+        return "Username Not Set";
+    }
 
-    public function peminjaman_create($data){}
-    public function peminjaman_read($id){}
-    public function peminjaman_update($id,$data){}
-    public function peminjaman_delete($id){}
+    public function peminjaman_create($data){
+        if(isset($data)){
+            return $this->db->insert($this->peminjaman,$data);
+        }
+        return "ERROR";
+    }
+    public function peminjaman_read($id){
+        if(isset($id)){
+            $this->db->where('id',$id)->get($this->peminjaman);
+        }else{
+            $data = $this->db->get($this->peminjaman);
+        }
+        return $data->result();
+    }
+    public function peminjaman_update($id,$data){
+        if(isset($id) && isset($data)){
+            return $this->db->update($this->peminjaman,$data);
+        }
+        return "ERROR";
+    }
+    public function peminjaman_delete($id){
+        if(isset($id)){
+            return $this->db->where('id',$id)->delete($this->peminjaman);
+        }else{
+            return $this->db->delete($this->peminjaman);
+        }
+        return "ERROR";
+    }
 
-    public function pengembalian_create($data){}
-    public function pengembalian read($id){}
-    public function pengembalian_update($id,$data){}
-    public function pengembalian_delete($id){}
+    public function pengembalian_create($data){
+        if(isset($data)){
+            return $this->db->insert($this->pengembalian,$data);
+        }
+        return "ERROR";
+    }
+    public function pengembalian_read($id){
+        if(isset($id)){
+            $this->db->where('id',$id)->get($this->pengembalian);
+        }else{
+            $data = $this->db->get($this->pengembalian);
+        }
+        return $data->result();
+    }
+    public function pengembalian_update($id,$data){
+        if(isset($id) && isset($data)){
+            return $this->db->update($this->pengembalian,$data);
+        }
+        return "ERROR";
+    }
+    public function pengembalian_delete($id){
+        if(isset($id)){
+            return $this->db->where('id',$id)->delete($this->pengembalian);
+        }else{
+            return $this->db->delete($this->pengembalian);
+        }
+        return "ERROR";
+    }
 }

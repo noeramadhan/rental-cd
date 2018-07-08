@@ -33,6 +33,22 @@ class M_pemain extends CI_Model{
     	return "ERROR";
     }
     
-    public function attatch(){}
-    public function detatch(){}
+    public function attatch($id,$cd){
+        if(isset($id)){
+            if(isset($cd)){
+                return $this->db->insert($this->table,array($cd,$id));
+            }
+            return "CD Not Set";
+        }
+        return "Username Not Set";
+    }
+    public function detatch($id,$cd){
+        if(isset($id)){
+            if(isset($cd)){
+                return $this->db->whrere('id_cd',$cd)->where('id_pemain',$id)->delete($this->table);
+            }
+            return "CD Not Set";
+        }
+        return "Username Not Set";
+    }
 }
