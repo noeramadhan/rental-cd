@@ -9,9 +9,33 @@ class Pemain extends REST_Controller {
         $this->load->model(array('m_pemain'));
     }
 
-    public function pemain_put(){}
-    public function pemain_read(){}
-    public function pemain_update(){}
-    public function pemain_delete(){}
+    public function pemain_put(){
+    	$id = $this->put('id');
+    	$name = $this->put('name');
+    	$pemain = $this->m_pemain->create(array($id,$name));
+    	$this->response($pemain,200);
+    }
+
+    public function pemain_get(){
+    	$id = $this->get('id');
+    	$pemain = $this->m_pemain->read($id);
+    	$this->response($pemain,200);
+    }
+
+    public function pemain_post(){
+    	$id = $this->post('id');
+    	$name = $this->post('name');
+    	$pemain = $this->m_pemain->update($id,array($id,$name));
+    	$this->response($pemain,200);
+    }
+
+    public function pemain_delete(){
+    	$id = $this->delete('id');
+    	$pemain = $this->m_pemain->delete($id);
+    	$this->response($pemain,200);
+    }
+
+    // attatch
+    // detatch
         
 }
