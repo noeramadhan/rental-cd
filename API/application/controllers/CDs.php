@@ -2,7 +2,7 @@
 
 require APPPATH . 'libraries/REST_Controller.php';
 
-class CD extends REST_Controller {
+class CDs extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);

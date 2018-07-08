@@ -2,7 +2,7 @@
 
 require APPPATH . 'libraries/REST_Controller.php';
 
-class Customer extends REST_Controller {
+class Customers extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);
