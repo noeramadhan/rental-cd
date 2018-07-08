@@ -27,7 +27,7 @@ class Admin extends REST_Controller {
     	$username = $this->post('username');
         $password = $this->post('password');
         $name = $this->post('name');
-    	$admin = $this->m_admin->update($username,array($password, $name));
+    	$admin = $this->m_admin->update($username,array($username,$password, $name));
     	$this->response($data, 200);
     }
 

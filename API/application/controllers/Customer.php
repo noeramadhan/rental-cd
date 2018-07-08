@@ -10,27 +10,30 @@ class Customer extends REST_Controller {
     }
 
     public function customer_put(){
-    	$data = array();
-    	$customer = $this->m_customer->create($data);
+    	$username = $this->put('username');
+        $password = $this->put('password');
+        $name = $this->put('name');
+    	$customer = $this->m_customer->create(array($username, $password, $name));
     	$this->response($customer,200);
     }
 
     public function customer_get(){
-    	$id = $this->get('id');
-    	$customer = $this->m_customer->read($id);
+    	$username = $this->get('username');
+    	$customer = $this->m_customer->read($username);
     	$this->response($customer,200);
     }
 
     public function customer_post(){
-    	$id = $this->post('id');
-    	$data = array();
-    	$customer = $this->m_customer->update($id,$data);
+    	$username = $this->post('username');
+        $password = $this->post('password');
+        $name = $this->post('name');
+    	$customer = $this->m_customer->update($username,array($username,$password, $name));
     	$this->response($data, 200);
     }
 
     public function customer_delete(){
-    	$id = $this->delete('id');
-    	$customer = $this->m_customer->delete($id);
+    	$username = $this->delete('username');
+    	$customer = $this->m_customer->delete($username);
     	$this->response($customer, 200);
     }
 
