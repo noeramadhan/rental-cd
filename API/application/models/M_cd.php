@@ -13,32 +13,31 @@ class M_cd extends CI_Model{
     	}
     	return "ERROR";
     }
-    public function read($id,$keyword){
-        if(isset($keyword)){
-            if($keyword=='genre'){
-                return $this->db->select('*')->from('cd')->join('genre','genre.id=cd.id')->join('negara','negara.id=cd.id')->where('genre.id',$id)->get()->result();
-            }else if($keyword=='negara'){
-                return $this->db->select('*')->from('cd')->join('genre','genre.id=cd.id')->join('negara','negara.id=cd.id')->where('negara.id',$id)->get()->result();
-            }else if($keyword=='tahun'){
-                return $this->db->select('*')->from('cd')->join('genre','genre.id=cd.id')->join('negara','negara.id=cd.id')->where('tahun',$id)->get()->result();
-            }
-        }else if(isset($id)){
-            return $this->db->where('id',$id)->get($this->cd)->result();
+
+    public function read($id){
+        if(isset($id)){
+            $data = $this->db->where('id',$id)->get($this->table);
+        }else{
+            $data = $this->db->get($this->table);
         }
-        return $this->db->get($this->cd)->result();
+        return $data->result();
     }
+
     public function update($id,$data){
     	if(isset($id) && isset($data)){
     		return $this->db->update($this->cd,$data);
     	}
     	return "ERROR";
     }
+
     public function delete($id){
-    	if(isset($id)){
-    		return $this->db->where('id',$id)->delete($this->cd);
-    	}else{
-    		return $this->db->delete($this->cd);
-    	}
-    	return "ERROR";
+        if(isset($id)){
+            return $this->db->where('id',$id)->delete($this->table);
+        }
+        return "ERROR";
+    }
+    
+    public function search($key,$val){
+        
     }
 }
