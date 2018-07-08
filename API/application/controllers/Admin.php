@@ -6,13 +6,14 @@ class Admin extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);
-        
         $this->load->model(array('m_admin'));
     }
 
     public function admin_put(){
-    	$data = array();
-    	$admin = $this->m_admin->create($data);
+    	$username = $this->put('username');
+        $password = $this->put('password');
+        $name = $this->put('name');
+    	$admin = $this->m_admin->create(array($username, $password, $name));
     	$this->response($admin,200);
     }
 
@@ -35,7 +36,8 @@ class Admin extends REST_Controller {
     	$admin = $this->m_admin->delete($username);
     	$this->response($admin, 200);
     }
-        public function login_get(){
+    
+    public function login_get(){
         $username = $this->get('username');
         $password = $this->get('password');
         $admin = $this->m_admin->login($username,$password);

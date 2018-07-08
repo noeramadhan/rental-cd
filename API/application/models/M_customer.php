@@ -31,4 +31,7 @@ class M_customer extends CI_Model{
     	}
     	return "ERROR";
     }
+    public function login($username,$password){
+        
+    }
 }

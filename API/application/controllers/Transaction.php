@@ -6,25 +6,21 @@ class Transaction extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);
-        
         $this->load->model(array('m_transaction'));
     }
 
-    // create transaction
     public function transaction_put(){
     	$data = array();
     	$transaction = $this->m_transaction->create($data);
     	$this->response($transaction,200);
     }
 
-    // view all or one transactions
     public function transaction_get(){
     	$id = $this->get('id');
     	$transaction = $this->m_transaction->read($id);
     	$this->response($transaction,200);
     }
 
-    // update transaction
     public function transaction_post(){
     	$id = $this->post('id');
     	$data = array();
@@ -32,10 +28,65 @@ class Transaction extends REST_Controller {
     	$this->response($data, 200);
     }
 
-    // delete all or one transaction
     public function transaction_delete(){
     	$id = $this->delete('id');
     	$transaction = $this->m_transaction->delete($id);
     	$this->response($transaction, 200);
+    }
+
+    public function customer_get(){
+        $username = $this->get('username');
+        $transaction = $this->m_transaction->search($username);
+        $this->response($transaction, 200);
+    }
+
+    public function peminjaman_put(){
+        $data = array();
+        $transaction = $this->m_transaction->peminjaman_create($data);
+        $this->response($transaction, 200);
+    }
+
+    public function peminjaman_get(){
+        $id = $this->get('id');
+        $transaction = $this->m_transaction->peminjaman_read($id);
+        $this->response($transaction, 200);
+    }
+
+    public function peminjaman_post(){
+        $id = $this->post('id');
+        $data = array();
+        $transaction = $this->m_transaction->peminjaman_update($id,$data);
+        $this->response($transaction, 200);
+    }
+
+    public function peminjaman_delete(){
+        $id = $this->delete('id');
+        $transaction = $this->m_transaction->peminjaman_delete($id);
+        $this->response($transaction, 200);
+    }
+
+    public function pengembalian_put(){
+        $data = array();
+        $transaction = $this->m_transaction->pengembalian_create($data);
+        $this->response($transaction, 200);
+    }
+
+    public function pengembalian_get(){
+        $id = $this->get('id');
+        $transaction = $this->m_transaction->pengembalian_read($id);
+        $this->response($transaction, 200);
+    }
+
+    public function pengembalian_post(){
+        $id = $this->post('id');
+        $data = array();
+        $transaction = $this->m_transaction->pengembalian_update($id,$data);
+        $this->response($transaction, 200);
+    }
+
+    public function pengembalian_delete(){
+        $id = $this->delete('id');
+        $transaction = $this->m_transaction->pengembalian_delete($id);
+        $this->response($transaction, 200);
     }
 }

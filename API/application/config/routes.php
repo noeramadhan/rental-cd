@@ -52,3 +52,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// ADMIN ROUTING 
+$route['admins'] = 'admins/admin';
+$route['admins/:(any)'] = 'admins/admin/username/$1';
+// CUTOMER ROUTING
+$route['customers'] = 'customers/customer';
+$route['customers/(:any'] = 'customers/customer/username/$1';
+// CD ROUTING
+$route['cds'] = 'cds/cd';
+$route['cds/(:any)'] = 'cds/cd/id/$1';
+$route['cds/search/(:any)/(:any)'] = 'cds/search/key/$1/value/$2';
+// TRANSACTION ROUTING
+$route['transactions'] = 'transactions/transaction';
+$route['transactions/(:any)'] = 'transactions/transaction/id/$1';
+$route['transactions/customer/(:any)'] = 'transactions/customer/username/$1';
+$route['transactions/peminjaman/(:any)'] = 'transactions/peminjaman/id/$1';
+$route['transactions/pengembalian/(:any)'] = 'transactions/pengembalian/id/$1';

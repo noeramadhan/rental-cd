@@ -41,4 +41,7 @@ class M_cd extends CI_Model{
     	}
     	return "ERROR";
     }
+    public function search($key,$val){
+        
+    }
 }
