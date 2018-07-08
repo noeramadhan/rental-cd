@@ -16,9 +16,8 @@ class CD extends REST_Controller {
     }
 
     public function cd_get(){
-    	$key = $this->get('k');
-        $query = $this->get('q');
-    	$cd = $this->m_cd->read($key,$query);
+        $id = $this->get('id');
+    	$cd = $this->m_cd->read($id);
     	$this->response($cd,200);
     }
 
