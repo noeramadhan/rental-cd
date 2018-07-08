@@ -40,21 +40,4 @@ class M_cd extends CI_Model{
     public function search($key,$val){
         
     }
-
-    public function negara_create(){}
-    public function negara_read(){}
-    public function negara_update(){}
-    public function negara_delete(){}
-
-    public function genre_create(){}
-    public function genre_read(){}
-    public function genre_update(){}
-    public function genre_delete(){}
-
-    public function pemain_create(){}
-    public function pemain_read(){}
-    public function pemain_update(){}
-    public function pemain_delete(){}
-    public function pemain_attatch(){}
-    public function pemain_detatch(){}
 }
