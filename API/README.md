@@ -2,52 +2,52 @@
 
 ## ADMINS
 ```txt
-/api/admins
-/api/admins/{username}
-/api/admins/login
+/admins
+/admins/{username}
+/admins/login
 ```
 
 ## CDS
 ```txt
-/api/cds
-/api/cds/{id}
-/api/cds/search/{key}/{value}
+/cds
+/cds/{id}
+/cds/search/{key}/{value}
 ```
 
 ## CUSTOMERS
 ```txt
-/api/customers
-/api/customers/{username}
-/api/customers/login
+/customers
+/customers/{username}
+/customers/login
 ```
 
 ## GENRE
 ```txt
-/api/genre
-/api/genre/{id}
+/genre
+/genre/{id}
 ```
 
 ## NEGARA
 ```txt
-/api/negara
-/api/negara/{id}
+/negara
+/negara/{id}
 ```
 
 ## PEMAIN
 ```txt
-/api/pemain
-/api/pemain/{id}
-/api/pemain/attach/{id}/{cd}
-/api/pemain/detatch/{id}/{cd}
+/pemain
+/pemain/{id}
+/pemain/attach/{id}/{cd}
+/pemain/detatch/{id}/{cd}
 ```
 
 ## TRANSACTIONS
 ```txt
-/api/transactions
-/api/transactions/{id}
-/api/transactions/customer/{username}
-/api/transactions/peminjaman
-/api/transactions/peminjaman/{id}
-/api/transactions/pengembalian
-/api/transactoins/pengembalian/{id}
+/transactions
+/transactions/{id}
+/transactions/customer/{username}
+/transactions/peminjaman
+/transactions/peminjaman/{id}
+/transactions/pengembalian
+/transactoins/pengembalian/{id}
 ```
