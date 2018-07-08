@@ -1,5 +1,3 @@
-# URI
-
 ## ADMINS
 ```txt
 /admins
