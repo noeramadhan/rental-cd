@@ -2809,11 +2809,14 @@ body,
 }
 
 body {
-    font-family: sans-serif;
     line-height: 1.4;
     margin: 0 auto;
-    background: url('../bak.jpg') no-repeat center center;;
     /* Fallback for when there is no custom background color defined. */
+}
+
+body, .custom-background{
+     background: url('../bak.jpg') no-repeat center center fixed;
+   background-size: cover;
 }
 
 legend {
@@ -3816,6 +3819,7 @@ option {
 }
 
 .container {
+    background-color: #0000CD; 
     margin-right: auto;
     margin-left: auto;
     padding-left: 10px;
@@ -5114,6 +5118,7 @@ ol.comment-list li .comment-meta:after,
 }
 
 .gmr-button-lk .gmr-grid .item-article {
+    background-color: #FAF0E6;
     margin-bottom: 0 !important;
 }
 
@@ -5223,11 +5228,13 @@ ol.comment-list li .comment-meta:after,
 }
 
 .has-post-thumbnail.gmr-smallthumb .item-article {
+    background-color: #FAF0E6;
     position: relative;
     margin-left: 220px;
 }
 
 .gmr-box-content {
+    background-color: #FAF0E6;
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -5280,6 +5287,7 @@ ol.comment-list li .comment-meta:after,
     }
     .has-post-thumbnail.gmr-smallthumb .item-article {
         margin-left: 0 !important;
+        background-color: #FAF0E6;
     }
 }
 
@@ -5387,13 +5395,15 @@ ol.comment-list li .comment-meta:after,
 /* Grid */
 
 .gmr-grid .item-article {
+    background-color: #FAF0E6;
     padding: 10px;
     margin-bottom: 15px;
 }
 
 .gmr-grid .item .gmr-box-content {
+    background-color: #FAF0E6;
     border: 1px solid #EEEEEE;
-    background-color: rgba(0, 0, 0, 0.025);
+    /*background-color: rgba(0, 0, 0, 0.025);*/
 }
 
 .gmr-grid .item .gmr-box-content .content-thumbnail {
@@ -5933,7 +5943,6 @@ object {
 .gmr-box-layout #footer-container {
     margin: 0 auto;
     max-width: 1092px;
-    margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
 
