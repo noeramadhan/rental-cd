@@ -4660,7 +4660,7 @@ ul.page-numbers li span.page-numbers.dots {
     clip: auto !important;
     color: #21759b;
     display: block;
-    font-size: 24px;
+    font-size: 14px;
     font-size: 1.4rem;
     font-weight: bold;
     height: auto;
@@ -5274,6 +5274,13 @@ ol.comment-list li .comment-meta:after,
     font-weight: 300;
     color: #BDBDBD;
 }
+
+.entry-content td,
+.entry-content p{
+    font-size: 15px;
+}
+
+
 
 .gmr-box-content.gmr-single span.byline {
     margin-right: 10px;
