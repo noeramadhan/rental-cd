@@ -3247,9 +3247,9 @@ pre code {
 #headboi{
     margin: 0;
     padding: 0;
-    background: url('../back.jpg') no-repeat center center;
+    background: url('../back.jpg') no-repeat center 0;
     object-fit: cover;
-    background-size: cover;   
+    background-size: cover; 
 }
 
 .gmr-headwrapper {
@@ -3697,7 +3697,7 @@ input[type="datetime-local"],
 input[type="color"],
 select,
 textarea {
-    background-color: inherit;
+    background-color: white;
     border-width: 1px;
     border-style: solid;
     border-color: #EEEEEE;
@@ -3819,7 +3819,6 @@ option {
 }
 
 .container {
-    background-color: #0000CD; 
     margin-right: auto;
     margin-left: auto;
     padding-left: 10px;
@@ -3843,7 +3842,7 @@ option {
     .container {
 
         width: 1170px;
-        max-width: 1090px;
+        max-width: 1092px;
     }
 }
 
@@ -5104,6 +5103,10 @@ ol.comment-list li .comment-meta:after,
     bottom: -1px;
     right: -1px;
 }
+.gmr-watch-movie .button{
+    background-color: #4169E1;
+    border-color: #4169E1;
+}
 
 .gmr-popup-button-widget {
     margin-bottom: 5px;
@@ -5857,59 +5860,59 @@ object {
 }
 
 .gmr-color1 {
-    background: #008299
+    background: #4617B4
 }
 
 .gmr-color2 {
-    background: #2672EC
+    background: #4617B4
 }
 
 .gmr-color3 {
-    background: #8C0095
+    background: #4617B4
 }
 
 .gmr-color4 {
-    background: #5133AB
+    background: #4617B4
 }
 
 .gmr-color5 {
-    background: #AC193D
+    background: #4617B4
 }
 
 .gmr-color6 {
-    background: #D24726
+    background: #4617B4
 }
 
 .gmr-color7 {
-    background: #008A00
+    background: #4617B4
 }
 
 .gmr-color8 {
-    background: #094AB2
+    background: #4617B4
 }
 
 .gmr-color9 {
-    background: #006AC1
+    background: #4617B4
 }
 
 .gmr-color10 {
-    background: #FF2E12
+    background: #4617B4
 }
 
 .gmr-color11 {
-    background: #1FAEFF
+    background: #4617B4
 }
 
 .gmr-color12 {
-    background: #91D100
+    background: #4617B4
 }
 
 .gmr-color13 {
-    background: #CEA539
+    background: #4617B4
 }
 
 .gmr-color14 {
-    background: #7F6E94
+    background: #4617B4
 }
 
 .gmr-color15 {
@@ -5917,23 +5920,23 @@ object {
 }
 
 .gmr-color16 {
-    background: #AD103C
+    background: #4617B4
 }
 
 .gmr-color17 {
-    background: #004D60
+    background: #4617B4
 }
 
 .gmr-color18 {
-    background: #569CE3
+    background: #4617B4
 }
 
 .gmr-color19 {
-    background: #E56C19
+    background: #4617B4
 }
 
 .gmr-color20 {
-    background: #1B58B8
+    background: #4617B4
 }
 
 #footer-container {
