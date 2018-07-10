@@ -78,13 +78,13 @@
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=base_url();?>index.php/userdashboard/transaksi" class="nav-link">
                   <i class="nav-icon fa fa-shopping-cart"></i>
                   <p>Transaksi</p>
                 </a>
               </li>
-              <li class="nav-item has-treeview menu-open">
-                <a href="#" class="nav-link active">
+              <li class="nav-item has-treeview menu-close">
+                <a href="<?=base_url();?>index.php/userdashboard/peminjaman" class="nav-link">
                   <i class="nav-icon fa fa-history"></i>
                   <p>
                     Sejarah
@@ -93,13 +93,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="<?=base_url();?>index.php/userdashboard/peminjaman" class="nav-link">
                       <i class="fa fa-circle-o nav-icon"></i>
                       <p>Peminjaman</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?=base_url();?>index.php/userdashboard/pengembalian" class="nav-link">
                       <i class="fa fa-circle-o nav-icon"></i>
                       <p>Pengembalian</p>
                     </a>
@@ -108,7 +108,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=base_url();?>index.php/userdashboard/setting" class="nav-link active">
                   <i class="nav-icon fa fa-cogs"></i>
                   <p>Setting</p>
                 </a>
