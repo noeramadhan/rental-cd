@@ -139,10 +139,13 @@
                 <div class="card">
                   <div class="card-body">
                     <!-- profile-user-img -->
-                    <img class="img-fluid" src="<?=base_url();?>assets/tle/dist/img/user2-160x160.jpg" alt="User profile picture">
-                    <button class="btn btn-info btn-block mt-3">
-                      <i class="fa fa-camera"></i> Change Picture
-                    </button>
+                    <div class="image">
+                      <img class="img-fluid" src="<?=base_url();?>assets/tle/dist/img/photo1.png" alt="User profile picture">
+                      <button class="btn btn-info btn-block mt-3">
+                        <i class="fa fa-camera"></i> Change Picture
+                      </button>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
