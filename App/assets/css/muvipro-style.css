@@ -2809,11 +2809,14 @@ body,
 }
 
 body {
-    font-family: sans-serif;
     line-height: 1.4;
     margin: 0 auto;
-    background: url('../bak.jpg') no-repeat center center;;
     /* Fallback for when there is no custom background color defined. */
+}
+
+body, .custom-background{
+     background: url('../bak.jpg') no-repeat center center fixed;
+   background-size: cover;
 }
 
 legend {
@@ -3244,9 +3247,9 @@ pre code {
 #headboi{
     margin: 0;
     padding: 0;
-    background: url('../back.jpg') no-repeat center center;
+    background: url('../back.jpg') no-repeat center 0;
     object-fit: cover;
-    background-size: cover;   
+    background-size: cover; 
 }
 
 .gmr-headwrapper {
@@ -3470,7 +3473,7 @@ pre code {
 
 .gmr-movie-data div.pull-right img,
 .gmr-movie-data figure img {
-    max-width: 60px;
+    max-width: 1071px;
 }
 
 .has-post-thumbnail .gmr-movie-data .gmr-movie-data-top {
@@ -3694,7 +3697,7 @@ input[type="datetime-local"],
 input[type="color"],
 select,
 textarea {
-    background-color: inherit;
+    background-color: white;
     border-width: 1px;
     border-style: solid;
     border-color: #EEEEEE;
@@ -3839,7 +3842,7 @@ option {
     .container {
 
         width: 1170px;
-        max-width: 1090px;
+        max-width: 1092px;
     }
 }
 
@@ -5100,6 +5103,10 @@ ol.comment-list li .comment-meta:after,
     bottom: -1px;
     right: -1px;
 }
+.gmr-watch-movie .button{
+    background-color: #4169E1;
+    border-color: #4169E1;
+}
 
 .gmr-popup-button-widget {
     margin-bottom: 5px;
@@ -5114,6 +5121,7 @@ ol.comment-list li .comment-meta:after,
 }
 
 .gmr-button-lk .gmr-grid .item-article {
+    background-color: #FAF0E6;
     margin-bottom: 0 !important;
 }
 
@@ -5223,11 +5231,13 @@ ol.comment-list li .comment-meta:after,
 }
 
 .has-post-thumbnail.gmr-smallthumb .item-article {
+    background-color: #FAF0E6;
     position: relative;
     margin-left: 220px;
 }
 
 .gmr-box-content {
+    background-color: #FAF0E6;
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -5265,6 +5275,13 @@ ol.comment-list li .comment-meta:after,
     color: #BDBDBD;
 }
 
+.entry-content td,
+.entry-content p{
+    font-size: 15px;
+}
+
+
+
 .gmr-box-content.gmr-single span.byline {
     margin-right: 10px;
 }
@@ -5280,6 +5297,7 @@ ol.comment-list li .comment-meta:after,
     }
     .has-post-thumbnail.gmr-smallthumb .item-article {
         margin-left: 0 !important;
+        background-color: #FAF0E6;
     }
 }
 
@@ -5387,13 +5405,15 @@ ol.comment-list li .comment-meta:after,
 /* Grid */
 
 .gmr-grid .item-article {
+    background-color: #FAF0E6;
     padding: 10px;
     margin-bottom: 15px;
 }
 
 .gmr-grid .item .gmr-box-content {
+    background-color: #FAF0E6;
     border: 1px solid #EEEEEE;
-    background-color: rgba(0, 0, 0, 0.025);
+    /*background-color: rgba(0, 0, 0, 0.025);*/
 }
 
 .gmr-grid .item .gmr-box-content .content-thumbnail {
@@ -5847,59 +5867,59 @@ object {
 }
 
 .gmr-color1 {
-    background: #008299
+    background: #4617B4
 }
 
 .gmr-color2 {
-    background: #2672EC
+    background: #4617B4
 }
 
 .gmr-color3 {
-    background: #8C0095
+    background: #4617B4
 }
 
 .gmr-color4 {
-    background: #5133AB
+    background: #4617B4
 }
 
 .gmr-color5 {
-    background: #AC193D
+    background: #4617B4
 }
 
 .gmr-color6 {
-    background: #D24726
+    background: #4617B4
 }
 
 .gmr-color7 {
-    background: #008A00
+    background: #4617B4
 }
 
 .gmr-color8 {
-    background: #094AB2
+    background: #4617B4
 }
 
 .gmr-color9 {
-    background: #006AC1
+    background: #4617B4
 }
 
 .gmr-color10 {
-    background: #FF2E12
+    background: #4617B4
 }
 
 .gmr-color11 {
-    background: #1FAEFF
+    background: #4617B4
 }
 
 .gmr-color12 {
-    background: #91D100
+    background: #4617B4
 }
 
 .gmr-color13 {
-    background: #CEA539
+    background: #4617B4
 }
 
 .gmr-color14 {
-    background: #7F6E94
+    background: #4617B4
 }
 
 .gmr-color15 {
@@ -5907,23 +5927,23 @@ object {
 }
 
 .gmr-color16 {
-    background: #AD103C
+    background: #4617B4
 }
 
 .gmr-color17 {
-    background: #004D60
+    background: #4617B4
 }
 
 .gmr-color18 {
-    background: #569CE3
+    background: #4617B4
 }
 
 .gmr-color19 {
-    background: #E56C19
+    background: #4617B4
 }
 
 .gmr-color20 {
-    background: #1B58B8
+    background: #4617B4
 }
 
 #footer-container {
@@ -5933,7 +5953,6 @@ object {
 .gmr-box-layout #footer-container {
     margin: 0 auto;
     max-width: 1092px;
-    margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
 
