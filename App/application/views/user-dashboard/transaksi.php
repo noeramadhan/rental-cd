@@ -153,53 +153,28 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                <table class="table">
+                <table class="table text-center">
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Task</th>
-                    <th>Progress</th>
-                    <th style="width: 40px">Label</th>
+                    <th>Customer Name</th>
+                    <th>Tanggal Pinjam</th>
+                    <th>Tanggal Kembali</th>
+                    <th style="width: 40px">Status</th>
+                    <th>Aksi</th>
                   </tr>
                   <tr>
-                    <td>1.</td>
-                    <td>Update software</td>
+                    <td>1</td>
+                    <td>Johar Putra</td>
+                    <td>10/07/2018</td>
+                    <td>13/07/2018</td>
+                    <td><span class="badge bg-primary">Pinjam</span></td>
                     <td>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                      </div>
+                      <a href="<?=base_url();?>index.php/userdashboard/detailtransaksi">
+                        <i class="fa fa-eye text-primary"></i>
+                      </a>
                     </td>
-                    <td><span class="badge bg-danger">55%</span></td>
                   </tr>
-                  <tr>
-                    <td>2.</td>
-                    <td>Clean database</td>
-                    <td>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar bg-warning" style="width: 70%"></div>
-                      </div>
-                    </td>
-                    <td><span class="badge bg-warning">70%</span></td>
-                  </tr>
-                  <tr>
-                    <td>3.</td>
-                    <td>Cron job running</td>
-                    <td>
-                      <div class="progress progress-xs progress-striped active">
-                        <div class="progress-bar bg-primary" style="width: 30%"></div>
-                      </div>
-                    </td>
-                    <td><span class="badge bg-primary">30%</span></td>
-                  </tr>
-                  <tr>
-                    <td>4.</td>
-                    <td>Fix and squish bugs</td>
-                    <td>
-                      <div class="progress progress-xs progress-striped active">
-                        <div class="progress-bar bg-success" style="width: 90%"></div>
-                      </div>
-                    </td>
-                    <td><span class="badge bg-success">90%</span></td>
-                  </tr>
+
                 </table>
               </div>
               <!-- /.card-body -->

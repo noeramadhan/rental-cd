@@ -15,4 +15,7 @@ class UserDashboard extends CI_Controller {
 	public function setting(){
 		$this->load->view('user-dashboard/setting');
 	}
+	public function detailTransaksi(){
+		$this->load->view('user-dashboard/detail-transaksi');
+	}
 }
