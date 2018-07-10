@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://localhost/rental-cd/App/';
+$config['base_url'] = 'http://localhost:8000/rental-cd/App/';
 
 
 /*

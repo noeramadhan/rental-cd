@@ -12,20 +12,20 @@
 <link rel='next' href='http://themovie21.com/page/2/' />
 
 <link rel="canonical" href="http://themovie21.com/" />
-<link rel='stylesheet' id='dashicons-css'  href='<?=base_url() ;?>/assets/css/dashicons.css' type='text/css' media='all' />
-<link rel='stylesheet' id='menu-icons-extra-css'  href='<?=base_url() ;?>/assets/css/extra.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='<?=base_url() ;?>assets/css/dashicons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-icons-extra-css'  href='<?=base_url() ;?>assets/css/extra.css' type='text/css' media='all' />
 <link rel='stylesheet' id='idmuvi-core-css'  href='<?=base_url() ;?>assets/css/idmuvi-core.css' type='text/css' media='all' />
-<link rel='stylesheet' id='muvipro-fonts-css'  href='<?=base_url() ;?>/assets/css/muvipro-fonts.css' type='text/css' media='all' />
+<link rel='stylesheet' id='muvipro-fonts-css'  href='<?=base_url() ;?>assets/css/muvipro-fonts.css' type='text/css' media='all' />
 <link rel='stylesheet' id='muvipro-style-css'  href='<?=base_url() ;?>assets/css/muvipro-style.css' type='text/css' media='all' />
 <style id='muvipro-style-inline-css' type='text/css'>
 body{color:#212121;font-family:"Source Sans Pro","Helvetica Neue",sans-serif;font-weight:500;font-size:12px;}kbd,a.button,button,.button,button.button,input[type="button"],input[type="reset"],input[type="submit"],ul.page-numbers li span.page-numbers,ul.page-numbers li a:hover,.widget-title:before,.widget-title:after,.page-title:before,.page-title:after,.tagcloud a,.page-links a .page-link-number:hover,.homemodule-title,.module-linktitle a,.post-navigation .nav-previous span,.post-navigation .nav-next span,.gmr-grid .item .gmr-box-content .content-thumbnail .gmr-posttype-item{background-color:#e50a4a;}a,a:hover,a:focus,a:active{color:#e50a4a;}a.button,button,.button,button.button,input[type="button"],input[type="reset"],input[type="submit"],.sticky .gmr-box-content,.gmr-theme div.sharedaddy h3.sd-title:before,.bypostauthor > .comment-body,.gmr-movie-data{border-color:#e50a4a;}.gmr-popup-button-widget a,.gmr-popup-button a,.module-linktitle a,.gmr-grid .item .gmr-box-content .content-thumbnail .gmr-quality-item a{background-color:#5cb85c;}.gmr-popup-button-widget a,.gmr-popup-button a{border-color:#5cb85c;}.site-header{background-image:url();-webkit-background-size:auto;-moz-background-size:auto;-o-background-size:auto;background-size:auto;background-repeat:repeat;background-position:center top;background-attachment:scroll;background-color:#ffffff;}.site-title a{color:#e50a4a;}.site-description,.gmr-search input[type="text"]{color:#999999;}.gmr-menuwrap{background-color:#6600ff;}#gmr-responsive-menu,#primary-menu > li > a{color:#ffffff;}#primary-menu > li.menu-border > a span{border-color:#ffffff;}#gmr-responsive-menu:hover,.gmr-mainmenu #primary-menu > li:hover > a,.gmr-mainmenu #primary-menu .current-menu-item > a,.gmr-mainmenu #primary-menu .current-menu-ancestor > a,.gmr-mainmenu #primary-menu .current_page_item > a,.gmr-mainmenu #primary-menu .current_page_ancestor > a{color:#ffffff;}.gmr-mainmenu #primary-menu > li.menu-border:hover > a span,.gmr-mainmenu #primary-menu > li.menu-border.current-menu-item > a span,.gmr-mainmenu #primary-menu > li.menu-border.current-menu-ancestor > a span,.gmr-mainmenu #primary-menu > li.menu-border.current_page_item > a span,.gmr-mainmenu #primary-menu > li.menu-border.current_page_ancestor > a span{border-color:#ffffff;}.gmr-mainmenu #primary-menu > li:hover > a,.gmr-mainmenu #primary-menu .current-menu-item > a,.gmr-mainmenu #primary-menu .current-menu-ancestor > a,.gmr-mainmenu #primary-menu .current_page_item > a,.gmr-mainmenu #primary-menu .current_page_ancestor > a{background-color:#99cc00;}.current_page_item > a,.gmr-secondmenu #primary-menu .current_page_ancestor > a{background-color:#f7b519;}.gmr-topnavmenuwrap{background-color:#ffffff;}#gmr-topnavresponsive-menu,.gmr-topnavmenu #primary-menu > li > a,.gmr-social-icon ul > li > a{color:#e50a4a;}.gmr-topnavmenu #primary-menu > li.menu-border > a span{border-color:#e50a4a;}#gmr-topnavresponsive-menu:hover,.gmr-topnavmenu #primary-menu > li:hover > a,.gmr-topnavmenu #primary-menu .current-menu-item > a,.gmr-topnavmenu #primary-menu .current-menu-ancestor > a,.gmr-topnavmenu #primary-menu .current_page_item > a,.gmr-topnavmenu #primary-menu .current_page_ancestor > a,.gmr-social-icon ul > li > a:hover{color:#212121;}.gmr-topnavmenu #primary-menu > li.menu-border:hover > a span,.gmr-topnavmenu #primary-menu > li.menu-border.current-menu-item > a span,.gmr-topnavmenu #primary-menu > li.menu-border.current-menu-ancestor > a span,.gmr-topnavmenu #primary-menu > li.menu-border.current_page_item > a span,.gmr-topnavmenu #primary-menu > li.menu-border.current_page_ancestor > a span{border-color:#212121;}.gmr-content,.idmuvi-topbanner{background-color:#ffffff;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.site-title,#gmr-responsive-menu,#primary-menu > li > a{font-family:"Source Sans Pro","Helvetica Neue",sans-serif;}h1{font-size:26px;}h2{font-size:22px;}h3{font-size:20px;}h4{font-size:18px;}h5{font-size:16px;}h6{font-size:14px;}.widget-footer{background-color:#ffffff;color:#212121;}.widget-footer a{color:#E91E63;}.widget-footer a:hover{color:#E91E63;}.site-footer{background-color:#f5f5f5;color:#212121;}.site-footer a{color:#E91E63;}.site-footer a:hover{color:#E91E63;}
 </style>
-<script type='text/javascript' src='<?=base_url() ;?>/assets/js/jq.js'></script>
+<script type='text/javascript' src='<?=base_url() ;?>assets/js/jq.js'></script>
 <style type="text/css" id="custom-background-css">
 body.custom-background { background-color: #f4f4f4; }
 </style>
-<link rel="icon" href='<?=base_url() ;?>/assets/logo1.png' sizes="32x32" />
-<link rel="icon" href='<?=base_url() ;?>/assets/logo1.png' sizes="360x360" />
+<link rel="icon" href='<?=base_url() ;?>assets/logo1.png' sizes="32x32" />
+<link rel="icon" href='<?=base_url() ;?>assets/logo1.png' sizes="360x360" />
 <!-- <link rel="apple-touch-icon-precomposed" href="http://themovie21.com/wp-content/uploads/2018/05/favicon-180x180.png" />
 <meta name="msapplication-TileImage" content="http://themovie21.com/wp-content/uploads/2018/05/favicon-270x270.png" />
  -->
@@ -40,7 +40,7 @@ body.custom-background { background-color: #f4f4f4; }
                     <div class="clearfix gmr-headwrapper" >
                         <div class="gmr-logo">
                             <a href="http://themovie21.com/" class="custom-logo-link" itemprop="url" title="TheMovie21">
-                                <img src='<?=base_url() ;?>/assets/logo1.png' alt="TheMovie21" title="Ren'dy" style="max-height: 200px!important"/>
+                                <img src='<?=base_url() ;?>assets/logo1.png' alt="TheMovie21" title="Ren'dy" style="max-height: 200px!important"/>
                                 <!-- <img src="<?=base_url() ;?>/assets/back.jpg" >  -->
                             </a>
                         </div>
