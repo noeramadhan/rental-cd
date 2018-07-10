@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jul 2018 pada 07.17
+-- Waktu pembuatan: 08 Jul 2018 pada 15.40
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 7.2.5
 
@@ -52,7 +52,7 @@ CREATE TABLE `cd` (
   `id` int(11) NOT NULL,
   `nama` varchar(25) NOT NULL,
   `genre` int(11) NOT NULL,
-  `sutradara` int(25) NOT NULL,
+  `sutradara` varchar(25) NOT NULL,
   `produksi` varchar(25) NOT NULL,
   `tanggal_rilis` date NOT NULL,
   `tahun` year(4) NOT NULL,
@@ -63,6 +63,13 @@ CREATE TABLE `cd` (
   `stok` int(11) NOT NULL DEFAULT '0',
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `cd`
+--
+
+INSERT INTO `cd` (`id`, `nama`, `genre`, `sutradara`, `produksi`, `tanggal_rilis`, `tahun`, `negara`, `durasi`, `rating`, `sinopsis`, `stok`, `status`) VALUES
+(1, 'The Lord of The Ring', 1, 'Jackson', 'MGM', '2018-07-07', 2018, 1, 117, 5, 'Lorem ipsum', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -101,6 +108,13 @@ CREATE TABLE `genre` (
   `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `genre`
+--
+
+INSERT INTO `genre` (`id`, `nama`) VALUES
+(1, 'Action');
+
 -- --------------------------------------------------------
 
 --
@@ -111,6 +125,13 @@ CREATE TABLE `negara` (
   `id` int(11) NOT NULL,
   `nama` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `negara`
+--
+
+INSERT INTO `negara` (`id`, `nama`) VALUES
+(1, 'Indonesia');
 
 -- --------------------------------------------------------
 
@@ -252,19 +273,19 @@ ALTER TABLE `transaksi_cd`
 -- AUTO_INCREMENT untuk tabel `cd`
 --
 ALTER TABLE `cd`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `negara`
 --
 ALTER TABLE `negara`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemain`

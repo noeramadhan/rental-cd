@@ -2,7 +2,7 @@
 
 require APPPATH . 'libraries/REST_Controller.php';
 
-class Transaction extends REST_Controller {
+class Transactions extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);
@@ -10,7 +10,12 @@ class Transaction extends REST_Controller {
     }
 
     public function transaction_put(){
-    	$data = array();
+    	$data = array(
+            'id_customer' => $this->put('customer'),
+            'tanggal_pinjam' => $this->put('tangal_pinjam'),
+            'tanggal_kembali' => $this->put('tanggal_kembali'),
+            'status' => $this->put('status')
+        );
     	$transaction = $this->m_transaction->create($data);
     	$this->response($transaction,200);
     }
@@ -23,7 +28,12 @@ class Transaction extends REST_Controller {
 
     public function transaction_post(){
     	$id = $this->post('id');
-    	$data = array();
+        $data = array(
+            'id_customer' => $this->put('customer'),
+            'tanggal_pinjam' => $this->put('tangal_pinjam'),
+            'tanggal_kembali' => $this->put('tanggal_kembali'),
+            'status' => $this->put('status')
+        );
     	$transaction = $this->m_transaction->update($id,$data);
     	$this->response($data, 200);
     }
@@ -41,7 +51,12 @@ class Transaction extends REST_Controller {
     }
 
     public function peminjaman_put(){
-        $data = array();
+        $data = array(
+            'id_transaksi' => $this->put('transaksi'),
+            'id_customer' => $this->put('customer'),
+            'id_cd' => $this->put('cd'),
+            'tanggal_pinjam' => $this->put('tanggal_pinjam')
+        );
         $transaction = $this->m_transaction->peminjaman_create($data);
         $this->response($transaction, 200);
     }
@@ -54,7 +69,12 @@ class Transaction extends REST_Controller {
 
     public function peminjaman_post(){
         $id = $this->post('id');
-        $data = array();
+        $data = array(
+            'id_transaksi' => $this->put('transaksi'),
+            'id_customer' => $this->put('customer'),
+            'id_cd' => $this->put('cd'),
+            'tanggal_pinjam' => $this->put('tanggal_pinjam')
+        );
         $transaction = $this->m_transaction->peminjaman_update($id,$data);
         $this->response($transaction, 200);
     }
@@ -66,7 +86,12 @@ class Transaction extends REST_Controller {
     }
 
     public function pengembalian_put(){
-        $data = array();
+        $data = array(
+            'id_transaksi' => $this->put('transaksi'),
+            'id_customer' => $this->put('customer'),
+            'id_cd' => $this->put('cd'),
+            'tanggal_kembali' => $this->put('tanggal_kembali')
+        );
         $transaction = $this->m_transaction->pengembalian_create($data);
         $this->response($transaction, 200);
     }
@@ -79,7 +104,12 @@ class Transaction extends REST_Controller {
 
     public function pengembalian_post(){
         $id = $this->post('id');
-        $data = array();
+        $data = array(
+            'id_transaksi' => $this->put('transaksi'),
+            'id_customer' => $this->put('customer'),
+            'id_cd' => $this->put('cd'),
+            'tanggal_kembali' => $this->put('tanggal_kembali')
+        );
         $transaction = $this->m_transaction->pengembalian_update($id,$data);
         $this->response($transaction, 200);
     }

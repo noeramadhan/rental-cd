@@ -9,9 +9,30 @@ class Negara extends REST_Controller {
         $this->load->model(array('m_negara'));
     }
 
-    public function negara_put(){}
-    public function negara_read(){}
-    public function negara_update(){}
-    public function negara_delete(){}
+    public function negara_put(){
+    	$id = $this->put('id');
+    	$name = $this->put('name');
+    	$negara = $this->m_negara->create(array($id,$name));
+    	$this->response($negara,200);
+    }
+
+    public function negara_get(){
+    	$id = $this->get('id');
+    	$negara = $this->m_negara->read($id);
+    	$this->response($negara,200);
+    }
+
+    public function negara_post(){
+    	$id = $this->post('id');
+    	$name = $this->post('name');
+    	$negara = $this->m_negara->update($id,array($id,$name));
+    	$this->response($negara,200);
+    }
+
+    public function negara_delete(){
+    	$id = $this->delete('id');
+    	$negara = $this->m_negara->delete($id);
+    	$this->response($negara,200);
+    }
     
 }

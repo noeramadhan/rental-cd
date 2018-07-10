@@ -55,10 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 // ADMIN ROUTING 
 $route['admins'] = 'admins/admin';
-$route['admins/:(any)'] = 'admins/admin/username/$1';
+$route['admins/(:any)'] = 'admins/admin/username/$1';
 // CUTOMER ROUTING
 $route['customers'] = 'customers/customer';
-$route['customers/(:any'] = 'customers/customer/username/$1';
+$route['customers/(:any)'] = 'customers/customer/username/$1';
 // CD ROUTING
 $route['cds'] = 'cds/cd';
 $route['cds/(:any)'] = 'cds/cd/id/$1';
@@ -69,3 +69,14 @@ $route['transactions/(:any)'] = 'transactions/transaction/id/$1';
 $route['transactions/customer/(:any)'] = 'transactions/customer/username/$1';
 $route['transactions/peminjaman/(:any)'] = 'transactions/peminjaman/id/$1';
 $route['transactions/pengembalian/(:any)'] = 'transactions/pengembalian/id/$1';
+// GENRE ROUTING
+$route['genre'] = 'genre/genre';
+$route['genre/(:any)'] = 'genre/genre/id/$1';
+// NEGARA ROUTING
+$route['negara'] = 'negara/negara';
+$route['negara/(:any)'] = 'negara/negara/id/$1';
+// PEMAIN ROUTING
+$route['pemain'] = 'pemain/pemain';
+$route['pemain/(:any)'] = 'pemain/pemain/id/$1';
+$route['pemain/attatch/(:any)/(:any)'] = 'pemain/attatch/id/$1/cd/$2';
+$route['pemain/detatch/(:any)/(:any)'] = 'pemain/detatch/id/$1/cd/$2';
