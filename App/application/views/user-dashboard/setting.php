@@ -125,7 +125,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm">
-                <h1 class="m-0 text-dark">Starter Page</h1>
+                <h1 class="m-0 text-dark">Setting</h1>
               </div>
             </div>
           </div>
@@ -135,74 +135,105 @@
           <div class="container-fluid">
             <div class="row">
 
-              <div class="col-12">
-
+              <div class="col-6">
                 <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title">Data Table With Full Features</h3>
-                  </div>
                   <div class="card-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 4.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td> 4</td>
-                          <td>X</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <!-- profile-user-img -->
+                    <img class="img-fluid" src="<?=base_url();?>assets/tle/dist/img/user2-160x160.jpg" alt="User profile picture">
+                    <button class="btn btn-info btn-block mt-3">
+                      <i class="fa fa-camera"></i> Change Picture
+                    </button>
                   </div>
                 </div>
+              </div>
 
+              <div class="col-6">
+
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-text">
+
+                      <div class="row">
+                        <div class="col">
+                         <div class="form-group">
+                          <label>Username</label>
+                          <input class="form-control" type="text" disabled="" value="joharptr">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label>Email</label>
+                          <input class="form-control" type="email" value="joharptr@gmail.com">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label>Old Password</label>
+                          <input class="form-control" type="password" value="oldpassword">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label>New Password</label>
+                          <input class="form-control" type="password" value="newpassword">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label>Alamat</label>
+                          <input class="form-control" type="text" value="Ajibarang">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label>No HP</label>
+                          <input class="form-control" type="number" value="0812345678901234">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input class="form-control" type="text" value="Johar Putra">
+                    </div>
+
+                    <button class="btn btn-info btn-block mt-3">
+                      <i class="fa fa-check"></i> Save Changes
+                    </button>
+
+                  </div>
+                </div>
               </div>
 
             </div>
+
           </div>
         </div>
       </div>
-
-      <footer class="main-footer">
-        <div class="float-right d-none d-sm-inline">
-          Made with <i class="fa fa-heart text-danger"></i> by Human.
-        </div>
-        <strong>&copy 2018</strong>
-      </footer>
     </div>
 
-    <script src="<?=base_url();?>assets/tle/plugins/jquery/jquery.min.js"></script>
-    <script src="<?=base_url();?>assets/tle/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?=base_url();?>assets/tle/plugins/datatables/jquery.dataTables.js"></script>
-    <script src="<?=base_url();?>assets/tle/plugins/datatables/dataTables.bootstrap4.js"></script>
-    <script src="<?=base_url();?>assets/tle/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="<?=base_url();?>assets/tle/plugins/fastclick/fastclick.js"></script>
-    <script src="<?=base_url();?>assets/tle/dist/js/adminlte.min.js"></script>
-    <script src="<?=base_url();?>assets/tle/dist/js/demo.js"></script>
-    <script>
-      $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
-      });
-    </script>
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-inline">
+        Made with <i class="fa fa-heart text-danger"></i> by Human.
+      </div>
+      <strong>&copy 2018</strong>
+    </footer>
+  </div>
 
-  </body>
-  </html>
+  <script src="<?=base_url();?>assets/tle/plugins/jquery/jquery.min.js"></script>
+  <script src="<?=base_url();?>assets/tle/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=base_url();?>assets/tle/plugins/datatables/jquery.dataTables.js"></script>
+  <script src="<?=base_url();?>assets/tle/plugins/datatables/dataTables.bootstrap4.js"></script>
+  <script src="<?=base_url();?>assets/tle/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+  <script src="<?=base_url();?>assets/tle/plugins/fastclick/fastclick.js"></script>
+  <script src="<?=base_url();?>assets/tle/dist/js/adminlte.min.js"></script>
+  <script src="<?=base_url();?>assets/tle/dist/js/demo.js"></script>
+
+</body>
+</html>
