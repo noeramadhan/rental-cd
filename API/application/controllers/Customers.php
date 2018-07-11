@@ -25,9 +25,16 @@ class Customers extends REST_Controller {
 
     public function customer_post(){
     	$username = $this->post('username');
-        $password = $this->post('password');
-        $name = $this->post('name');
-    	$customer = $this->m_customer->update($username,array($username,$password, $name));
+        $data = array(
+            'username' => $username,
+            'password' => $this->post('password'),
+            'nama' => $this->post('nama'),
+            'email' => $this->post('email'),
+            'alamat' => $this->post('alamat'),
+            'no_hp' => $this->post('no_hp'),
+            'photo' => $this->post('photo')
+        );
+    	$customer = $this->m_customer->update($username,$data);
     	$this->response($data, 200);
     }
 
