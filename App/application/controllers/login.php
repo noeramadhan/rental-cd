@@ -10,7 +10,7 @@ class Login extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('v_login');
+		$this->load->view('/v_login');
 	}
 
 	function aksi_login(){
@@ -35,10 +35,43 @@ class Login extends CI_Controller{
 		}else{
 			echo "Username dan password salah !";
 		}
+	}function edit_cd(){
+		$this->load->view('admin/CD');	
+
+	}
+	function edit_user(){
+		$this->load->view('admin/ubah_user');	
+		
+	}
+	function edit_peminjaman(){
+		$this->load->view('admin/ubah_peminjaman');	
+		
+	}
+	function edit_customer(){
+		$this->load->view('admin/customer.php');	
+		
+	}
+	function edit_negara(){
+		$this->load->view('admin/negara.php');	
+		
+	}
+	function edit_pemain(){
+		$this->load->view('admin/pemain.php');	
+		
+	}
+	function edit_transaksi(){
+		$this->load->view('admin/transaksi.php');	
+		
+	}
+	function edit_genre(){
+		$this->load->view('admin/genre.php');	
+		
 	}
 
 	function logout(){
 		$this->session->sess_destroy();
 		redirect(base_url('login'));
 	}
+
+
 }

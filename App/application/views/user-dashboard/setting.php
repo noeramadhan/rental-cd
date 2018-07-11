@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,10 +44,12 @@
         <div class="sidebar">
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="<?=base_url();?>assets/tle/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+              <img src="<?=$user->photo;?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block">Johar Putra</a>
+              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block">
+                <?php echo $user->nama;?>
+              </a>
             </div>
           </div>
 
@@ -107,90 +111,94 @@
 
         <div class="content">
           <div class="container-fluid">
-            <div class="row">
 
-              <div class="col-6">
-                <div class="card">
-                  <div class="card-body">
-                    <!-- profile-user-img -->
-                    <div class="image">
-                      <img class="img-fluid" src="<?=base_url();?>assets/tle/dist/img/photo1.png" alt="User profile picture">
-                      <button class="btn btn-info btn-block mt-3">
-                        <i class="fa fa-camera"></i> Change Picture
-                      </button>
+            <form action="<?=base_url();?>index.php/userdashboard/setting" method="post">
+
+              <div class="row">
+
+                <div class="col-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- profile-user-img -->
+                      <div class="image">
+                        <img class="img-fluid" src="<?=$user->photo;?>" alt="User profile picture">
+                        <button class="btn btn-info btn-block mt-3">
+                          <i class="fa fa-camera"></i> Change Picture
+                        </button>
+                      </div>
+
                     </div>
-                    
                   </div>
                 </div>
-              </div>
 
-              <div class="col-6">
+                <div class="col-6">
 
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-text">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-text">
+
+                        <div class="row">
+                          <div class="col">
+                           <div class="form-group">
+                            <label>Username</label>
+                            <input class="form-control" type="text" value="<?=$user->username;?>" name="username">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label>Email</label>
+                            <input class="form-control" type="email" value="<?=$user->email;?>" name="email">
+                          </div>
+                        </div>
+                      </div>
 
                       <div class="row">
                         <div class="col">
-                         <div class="form-group">
-                          <label>Username</label>
-                          <input class="form-control" type="text" disabled="" value="joharptr">
+                          <div class="form-group">
+                            <label>Old Password</label>
+                            <input class="form-control" type="password" value="<?=$user->password;?>" name="oldpassword">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label>New Password</label>
+                            <input class="form-control" type="password" value="<?=$user->password;?>" name="newpassword">
+                          </div>
                         </div>
                       </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label>Email</label>
-                          <input class="form-control" type="email" value="joharptr@gmail.com">
+
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label>Alamat</label>
+                            <input class="form-control" type="text" value="<?=$user->alamat;?>" name="alamat">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label>No HP</label>
+                            <input class="form-control" type="number" value="<?=$user->no_hp;?>" name="no_hp">
+                          </div>
                         </div>
                       </div>
+
+                      <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" type="text" value="<?=$user->nama;?>" name="nama">
+                      </div>
+
+                      <button class="btn btn-info btn-block mt-3" name="submit">
+                        <i class="fa fa-check"></i> Save Changes
+                      </button>
+
                     </div>
-
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-group">
-                          <label>Old Password</label>
-                          <input class="form-control" type="password" value="oldpassword">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label>New Password</label>
-                          <input class="form-control" type="password" value="newpassword">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-group">
-                          <label>Alamat</label>
-                          <input class="form-control" type="text" value="Ajibarang">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label>No HP</label>
-                          <input class="form-control" type="number" value="0812345678901234">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label>Name</label>
-                      <input class="form-control" type="text" value="Johar Putra">
-                    </div>
-
-                    <button class="btn btn-info btn-block mt-3">
-                      <i class="fa fa-check"></i> Save Changes
-                    </button>
-
                   </div>
                 </div>
+
               </div>
 
             </div>
-
-          </div>
+          </form>
         </div>
       </div>
     </div>

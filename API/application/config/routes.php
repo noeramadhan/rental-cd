@@ -69,6 +69,7 @@ $route['transactions/(:any)'] = 'transactions/transaction/id/$1';
 $route['transactions/customer/(:any)'] = 'transactions/customer/username/$1';
 $route['transactions/peminjaman/(:any)'] = 'transactions/peminjaman/id/$1';
 $route['transactions/pengembalian/(:any)'] = 'transactions/pengembalian/id/$1';
+
 // GENRE ROUTING
 $route['genre'] = 'genre/genre';
 $route['genre/(:any)'] = 'genre/genre/id/$1';

@@ -12,7 +12,7 @@ class M_customer extends CI_Model{
 
     public function read($username){
     	if(isset($username)){
-    		$this->db->where('username',$username)->get($this->table);
+    		$data = $this->db->where('username',$username)->get($this->table);
     	}else{
     		$data = $this->db->get($this->table);
     	}
