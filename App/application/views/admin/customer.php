@@ -156,7 +156,7 @@
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Dashboard
@@ -165,37 +165,37 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_cd');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_cd');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>EDIT CD</p>
                 </a>
               </li>
                <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_customer');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_customer');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit customer</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_negara');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_negara');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit negara</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_pemain');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_pemain');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit pemain</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_transaksi');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_transaksi');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit transaksi</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_genre');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_genre');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit genre</p>
                 </a>
@@ -267,19 +267,19 @@
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">password</label>
                       <div class="col-md-10">
-                        <input type="text" name="tipe" class="form-control " />
+                        <input type="password" name="tipe" class="form-control " />
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">nama</label>
                       <div class="col-md-10">
-                        <input type="number" name="harga" class="form-control " />
+                        <input type="text" name="harga" class="form-control " />
                       </div>
                     </div>
                      <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">email</label>
                       <div class="col-md-10">
-                        <input type="number" name="harga" class="form-control " />
+                        <input type="email" name="harga" class="form-control " />
                       </div>
                     </div>
                   
@@ -288,7 +288,7 @@
                         <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">alamat</label>
                       <div class="col-md-10">
-                        <input type="number" name="harga" class="form-control " />
+                        <input type="text" name="harga" class="form-control " />
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">

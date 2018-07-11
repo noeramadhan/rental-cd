@@ -156,7 +156,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Dashboard
@@ -165,37 +165,37 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_cd');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_cd');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>EDIT CD</p>
                 </a>
               </li>
                <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_customer');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_customer');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit customer</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_negara');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_negara');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit negara</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_pemain');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_pemain');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit pemain</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_transaksi');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_transaksi');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit transaksi</p>
                 </a>
               </li>
                 <li class="nav-item">
-                <a href="<?=base_url('index.php/login/edit_genre');?>" class="nav-link active">
+                <a href="<?=base_url('index.php/login/edit_genre');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p> edit genre</p>
                 </a>
@@ -261,17 +261,33 @@
                    
                    
                     <div class="row" style="padding-bottom: 10px;">
-                        <label class="col-md-2">tanggal pinjam</label>
-                        <div class="col-md-10">
-                            <input type="number" name="harga" class="form-control " />
-                        </div>
+                      <label class="col-md-2">tgl pinjam</label>
+                      <div class="col-md-10">
+                    <div class="input-group date" data-provide="datepicker">
+                      <input type="text" class="form-control">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
                     </div>
-                    <div class="row" style="padding-bottom: 10px;">
-                        <label class="col-md-2">tanggal kembali</label>
-                        <div class="col-md-10">
-                            <input type="number" name="stok" required="required" class="form-control " />
-                        </div>
+                    <script type="text/javascript">
+                      $('.datepicker').datepicker();
+                    </script>
+                       </div>
+                       </div>
+                   <div class="row" style="padding-bottom: 10px;">
+                      <label class="col-md-2">tgl kembali</label>
+                      <div class="col-md-10">
+                    <div class="input-group date" data-provide="datepicker">
+                      <input type="text" class="form-control">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
                     </div>
+                    <script type="text/javascript">
+                      $('.datepicker').datepicker();
+                    </script>
+                       </div>
+                       </div>
                    
                   <div>
                   <button type="submit" class="btn btn-primary " style="margin-left: 330px;">Submit</button>
