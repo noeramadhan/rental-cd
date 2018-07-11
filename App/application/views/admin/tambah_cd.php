@@ -164,7 +164,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-               <li class="nav-item">
+              <li class="nav-item">
                 <a href="<?=base_url('index.php/login/tambah_cd');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>tambah CD</p>
@@ -275,7 +275,8 @@
                   <div class="clearfix"></div>
                 </div>
                 <div><br />
-                  <form action="<?php echo base_url()."index.php/login/lihat_data"; ?>" method="post" enctype="multipart/form-data">
+                  <form action="<?php echo base_url()."index.php/login/tambah_cd"; ?>"
+method="post" enctype="multipart/x-www-form-urlencoded">
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Nama <span class="required">*</span></label>
                       <div class="col-md-10">
@@ -306,7 +307,7 @@
                       <label class="col-md-2">tanggal rilis</label>
                       <div class="col-md-10">
                     <div class="input-group date" data-provide="datepicker">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tanggal_rilis">
                       <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th"></span>
                       </div>
@@ -361,7 +362,7 @@
                       </div>
                     </div>                
                     <div>
-                      <button type="submit" class="btn btn-primary " style="margin-left: 330px;">Submit</button>
+                      <button type="submit" name="submit" class="btn btn-primary " style="margin-left: 330px;">Submit</button>
                     </div>
 
                   </form>

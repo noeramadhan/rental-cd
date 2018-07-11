@@ -23,8 +23,11 @@ class CDs extends REST_Controller {
             'sinopsis' => $this->put('sinopsis'),
             'stok' => $this->put('stok'),
             'status' => $this->put('status')
+
         );
+        var_dump($data);
     	$cd = $this->m_cd->create($data);
+        var_dump($cd);
     	$this->response($cd,200);
     }
 
