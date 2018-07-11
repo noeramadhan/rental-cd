@@ -18,16 +18,47 @@ class cd extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('home');
+	var $API ="";
+	function __construct() {
+		parent::__construct();
+		$this->API = "http://localhost:8000/rental-cd/API/index.php/";
 	}
-	public function detail()
-	{
-		$this->load->view('detail');
+
+	public function index(){
+		$data['datacd'] = json_decode($this->curl->simple_get($this->API.'cds'));
+		$data['title'] = "Data CD";
+		$this->load->view('home',$data);
 	}
-	public function search()
-	{
+	
+
+	public function detail(){
+		$id = 1;
+		
+		$cd = json_decode($this->curl->simple_get($this->API.'cds/'.$id));
+		$data['detailcd'] = $cd[0];
+		$data['title'] = "Detail CD";
+
+		$this->load->view('detail',$data);
+
+	}
+	public function search(){
+		$rawData = $mobile->searchData();
+
+		if(empty($rawData)) {
+			$statusCode = 404;
+			$rawData = array('error' => 'Film tidak ditemukan!');		
+		} else {
+			$statusCode = 200;
+		}
 		$this->load->view('search');
+		
+		$result["output"] = $rawData;
+				
+		if(strpos($requestContentType,'search') !== false){
+			$response = $this->encodeJson($result);
+			echo $response;
+		}
+
+		
 	}
 }
