@@ -10,6 +10,10 @@ class UserDashboard extends CI_Controller {
 		$this->API = "http://localhost/rental-cd/Api/index.php/";
 	}
 
+	public function login(){
+		$this->load->view('user-dashboard/login');
+	}
+
 	public function transaksi(){
 		$username = "smith";
 		$user = json_decode($this->curl->simple_get($this->API.'customers/'.$username));
