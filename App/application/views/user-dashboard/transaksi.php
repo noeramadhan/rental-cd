@@ -42,10 +42,10 @@
         <div class="sidebar">
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="<?=base_url();?>assets/tle/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+              <img src="<?=$user->photo?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block">Johar Putra</a>
+              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block"><?=$user->nama?></a>
             </div>
           </div>
 
@@ -136,19 +136,35 @@
                     <th style="width: 40px">Status</th>
                     <th>Aksi</th>
                   </tr>
+                  <?php
+                  foreach($transaksi as $data){
+                  ?>
                   <tr>
-                    <td>1</td>
-                    <td>Johar Putra</td>
-                    <td>10/07/2018</td>
-                    <td>13/07/2018</td>
-                    <td><span class="badge bg-primary">Pinjam</span></td>
+                    <td><?=$data->id;?></td>
+                    <td><?=$data->id_customer;?></td>
+                    <td><?=$data->tanggal_pinjam;?></td>
+                    <td><?=$data->tanggal_kembali;?></td>
+                    <?php
+
+                    if($data->status==0){
+                      ?>
+                        <td><span class="badge bg-primary">Pinjam</span></td>
+                      <?php
+                    }else{
+                      ?>
+                        <td><span class="badge bg-success">Kembali</span></td>
+                      <?php
+                    }
+                    ?>
                     <td>
                       <a href="<?=base_url();?>index.php/userdashboard/detailtransaksi">
                         <i class="fa fa-eye text-primary"></i>
                       </a>
                     </td>
                   </tr>
-
+                  <?php
+                  }
+                  ?>
                 </table>
               </div>
               <!-- /.card-body -->

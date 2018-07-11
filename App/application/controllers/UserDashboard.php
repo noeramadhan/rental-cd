@@ -12,14 +12,22 @@ class UserDashboard extends CI_Controller {
 
 	public function transaksi(){
 		$username = "smith";
-		$data['user'] = json_decode($this->curl->simple_get($this->API.'transactions/customer/'.$username));
+		$user = json_decode($this->curl->simple_get($this->API.'customers/'.$username));
+		$data['user'] = $user[0];
+		$data['transaksi'] = json_decode($this->curl->simple_get($this->API.'transactions/customer/'.$username));
 		$this->load->view('user-dashboard/transaksi',$data);
 	}
 	public function peminjaman(){
-		$this->load->view('user-dashboard/peminjaman');
+		$username = "smith";
+		$user = json_decode($this->curl->simple_get($this->API.'customers/'.$username));
+		$data['user'] = $user[0];
+		$this->load->view('user-dashboard/peminjaman',$data);
 	}
 	public function pengembalian(){
-		$this->load->view('user-dashboard/pengembalian');
+		$username = "smith";
+		$user = json_decode($this->curl->simple_get($this->API.'customers/'.$username));
+		$data['user'] = $user[0];
+		$this->load->view('user-dashboard/pengembalian',$data);
 	}
 	public function setting(){
 		if (isset($_POST['submit'])) {
@@ -54,6 +62,9 @@ class UserDashboard extends CI_Controller {
 		
 	}
 	public function detailTransaksi(){
-		$this->load->view('user-dashboard/detail-transaksi');
+		$username = "smith";
+		$user = json_decode($this->curl->simple_get($this->API.'customers/'.$username));
+		$data['user'] = $user[0];
+		$this->load->view('user-dashboard/detail-transaksi',$data);
 	}
 }

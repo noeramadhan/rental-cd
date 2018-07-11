@@ -40,7 +40,7 @@ class M_transaction extends CI_Model{
 
     public function search($username){
         if(isset($username)){
-            return $this->db->where('id_customer',$username)->get($this->table)->result();
+            return $this->db->where('id_customer',$username)->get($this->transaction)->result();
         }
         return "Username Not Set";
     }
