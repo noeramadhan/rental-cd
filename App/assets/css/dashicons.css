@@ -30,6 +30,10 @@
     -moz-osx-font-smoothing: grayscale
 }
 
+.dashicons-login-site:before {
+	content: "\f110"
+}
+
 .dashicons-menu:before {
     content: "\f333"
 }

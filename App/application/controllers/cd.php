@@ -35,30 +35,21 @@ class cd extends CI_Controller {
 		$id = 1;
 		
 		$cd = json_decode($this->curl->simple_get($this->API.'cds/'.$id));
-		$data['detailcd'] = $cd[0];
+		$data['detailcd'] = $cd[0]; 
 		$data['title'] = "Detail CD";
 
 		$this->load->view('detail',$data);
 
 	}
 	public function search(){
-		$rawData = $mobile->searchData();
-
-		if(empty($rawData)) {
-			$statusCode = 404;
-			$rawData = array('error' => 'Film tidak ditemukan!');		
-		} else {
-			$statusCode = 200;
-		}
+		
 		$this->load->view('search');
-		
-		$result["output"] = $rawData;
-				
-		if(strpos($requestContentType,'search') !== false){
-			$response = $this->encodeJson($result);
-			echo $response;
 		}
 
-		
+	public function login(){
+		$data['login'] = json_decode($this->curl->simple_get($this->API.'cds'));
+		$data['title'] = "Data CD";
+		$this->load->view('login',$data);
 	}
+		
 }

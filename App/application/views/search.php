@@ -44,8 +44,9 @@
 <style type="text/css" id="custom-background-css">
 body.custom-background { background-color: #f4f4f4; }
 </style>
-<link rel="icon" href="http://themovie21.com/wp-content/uploads/2018/05/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" href="http://themovie21.com/wp-content/uploads/2018/05/favicon-192x192.png" sizes="192x192" />
+<link rel="icon" href='<?=base_url() ;?>assets/logo1.png' sizes="32x32" />
+<link rel="icon" href='<?=base_url() ;?>assets/logo1.png' sizes="360x360" />
+
 <link rel="apple-touch-icon-precomposed" href="http://themovie21.com/wp-content/uploads/2018/05/favicon-180x180.png" />
 <meta name="msapplication-TileImage" content="http://themovie21.com/wp-content/uploads/2018/05/favicon-270x270.png" />
 
@@ -155,6 +156,10 @@ body.custom-background { background-color: #f4f4f4; }
 										<li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-muvicountry menu-item-100"><a title="United Kingdom" href="http://themovie21.com/country/united-kingdom/" itemprop="url"><span itemprop="name">United Kingdom</span></a></li>
 										<li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-muvicountry menu-item-1048"><a href="http://themovie21.com/country/viet-nam/" itemprop="url"><span itemprop="name">Viet Nam</span></a></li>
 									</ul>
+									<li id="menu-item-2024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2024 pull-right"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-login-site" aria-hidden="true"></i><span>Login</span></span></a></li>
+
+                                    <li id="menu-item-2025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2025 pull-right"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-login-site" aria-hidden="true"></i><span>Register</span></span></a></li>
+									</li>
 								</li>
 								
 								<li class="menu-item menu-item-type-close-btn gmr-close-btn"><a id="close-menu-button" itemprop="url" href="#">Close Menu</a></li></ul>								</nav><!-- #site-navigation -->	
@@ -162,28 +167,7 @@ body.custom-background { background-color: #f4f4f4; }
 						</div>
 					</div><!-- .top-header -->
 
-					<div class="second-header">
-						<div class="gmr-secondmenuwrap clearfix">
-							<div class="container">
-								<a id="gmr-secondaryresponsive-menu" href="#secondmenus">
-								MENU								</a>
-								<nav id="site-navigation" class="gmr-secondmenu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<ul id="primary-menu" class="menu"><li id="menu-item-82" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-82"><a title="Fantasy" href="http://themovie21.com/Genre/fantasy/" itemprop="url"><span itemprop="name">Semi</span></a></li>
-										<li id="menu-item-77" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-77"><a title="Action" href="http://themovie21.com/Genre/action/" itemprop="url"><span itemprop="name">Action</span></a></li>
-										<li id="menu-item-78" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-78"><a title="Drama" href="http://themovie21.com/Genre/drama/" itemprop="url"><span itemprop="name">Drama</span></a></li>
-										<li id="menu-item-80" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-80"><a title="Science Fiction" href="http://themovie21.com/Genre/science-fiction/" itemprop="url"><span itemprop="name">Science Fiction</span></a></li>
-										<li id="menu-item-83" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-83"><a title="Crime" href="http://themovie21.com/Genre/crime/" itemprop="url"><span itemprop="name">Crime</span></a></li>
-										<li id="menu-item-85" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-85"><a title="Mystery" href="http://themovie21.com/Genre/mystery/" itemprop="url"><span itemprop="name">Mystery</span></a></li>
-										<li id="menu-item-87" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-87"><a title="Thriller" href="http://themovie21.com/Genre/thriller/" itemprop="url"><span itemprop="name">Thriller</span></a></li>
-										<li id="menu-item-88" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-88"><a title="Fantasy" href="http://themovie21.com/Genre/fantasy/" itemprop="url"><span itemprop="name">Fantasy</span></a></li>
-										<li id="menu-item-89" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89"><a title="Crime" href="http://themovie21.com/Genre/crime/" itemprop="url"><span itemprop="name">Crime</span></a></li>
-										<li id="menu-item-90" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-90"><a title="Romance" href="http://themovie21.com/Genre/romance/" itemprop="url"><span itemprop="name">Romance</span></a></li>
-										<li id="menu-item-91" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-91"><a title="Comedy" href="http://themovie21.com/Genre/comedy/" itemprop="url"><span itemprop="name">Comedy</span></a></li>
-										<li class="menu-item menu-item-type-close-btn gmr-close-btn"><a id="close-secondmenu-button" itemprop="url" href="#">Close Menu</a></li></ul>								</nav><!-- #site-navigation -->	
-									</div>
-								</div>
-							</div><!-- .top-header -->
-
+					
 						</header><!-- #masthead -->
 
 						<div id="content" class="gmr-content">

@@ -296,7 +296,7 @@
                         MENU                                </a>
                         <nav id="site-navigation" class="gmr-mainmenu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             <ul id="primary-menu" class="menu">
-                                <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-65"><a title="Home" href="http://themovie21.com" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-admin-home" aria-hidden="true"></i><span>Home</span></span></a></li>
+                                <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-65"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-admin-home" aria-hidden="true"></i><span>Home</span></span></a></li>
                                 <li id="menu-item-66" class="col-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-66"><a title="Genre" href="#" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-editor-video" aria-hidden="true"></i><span>Genre</span></span></a>
                                     <ul class="sub-menu">
                                         <li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a title="Action" href="http://themovie21.com/Genre/action/" itemprop="url"><span itemprop="name">Action</span></a></li>
@@ -384,7 +384,9 @@
                                         <li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-muvicountry menu-item-100"><a title="United Kingdom" href="http://themovie21.com/country/united-kingdom/" itemprop="url"><span itemprop="name">United Kingdom</span></a></li>
                                         <li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-muvicountry menu-item-1048"><a href="http://themovie21.com/country/viet-nam/" itemprop="url"><span itemprop="name">Viet Nam</span></a></li>
                                     </ul>
-                                </li>
+                                    <li id="menu-item-2024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2024 pull-right"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-login-site" aria-hidden="true"></i><span>Login</span></span></a></li>
+
+                                    <li id="menu-item-2025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2025 pull-right"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-login-site" aria-hidden="true"></i><span>Register</span></span></a></li>
 
                                 <li class="menu-item menu-item-type-close-btn gmr-close-btn"><a id="close-menu-button" itemprop="url" href="#">Close Menu</a></li>
                             </ul>

@@ -184,6 +184,9 @@ body.custom-background { background-color: #f4f4f4; }
 											<li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-muvicountry menu-item-100"><a title="United Kingdom" href="http://themovie21.com/country/united-kingdom/" itemprop="url"><span itemprop="name">United Kingdom</span></a></li>
 											<li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-muvicountry menu-item-1048"><a href="http://themovie21.com/country/viet-nam/" itemprop="url"><span itemprop="name">Viet Nam</span></a></li>
 										</ul>
+										<li id="menu-item-2024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2024 pull-right"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-login-site" aria-hidden="true"></i><span>Login</span></span></a></li>
+
+                                    <li id="menu-item-2025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2025 pull-right"><a title="Home" href="http://localhost:8000/rental-cd/app/index.php/cd/" itemprop="url"><span itemprop="name"><i class="_mi _before dashicons dashicons-login-site" aria-hidden="true"></i><span>Register</span></span></a></li>
 									</li>
 									
 									<li class="menu-item menu-item-type-close-btn gmr-close-btn"><a id="close-menu-button" itemprop="url" href="#">Close Menu</a></li></ul>								</nav><!-- #site-navigation -->	
