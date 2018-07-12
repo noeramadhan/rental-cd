@@ -269,35 +269,39 @@
           <div class="card-body">
 
             <div class="col-md-4">
-              <div>
-                <div>
-
-                  <div class="clearfix"></div>
+              
+                
+          <div>
+                <h2>Form <?php echo $title;?></h2>
+                <div class="clearfix"></div>
+            </div>
+                  
                 </div>
                 <div><br />
-                  <form action="<?php echo base_url()."index.php/login/lihat_data"; ?>" method="post" enctype="multipart/form-data">
+                  <form action="<?php echo base_url()."index.php/login/edit_cd"; ?>" method="post" enctype="multipart/form-data">
+                      <input type="hidden" name="id"  value="<?php echo $datacd->id; ?>" />
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Nama <span class="required">*</span></label>
                       <div class="col-md-10">
-                        <input type="text" name="nama" required="required" class="form-control" />
+                        <input type="text" name="nama" required="required" class="form-control" value="<?php echo $datacd->nama; ?>" />
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Genre</label>
                       <div class="col-md-10">
-                        <input type="text" name="genre" class="form-control " />
+                        <input type="text" name="genre" class="form-control "  value="<?php echo $datacd->genre; ?>" />
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Sutradara</label>
                       <div class="col-md-10">
-                        <input type="text" name="sutradara" class="form-control " />
+                        <input type="text" name="sutradara" class="form-control "  value="<?php echo $datacd->sutradara; ?>" />
                       </div>
                     </div>
                      <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">produksi</label>
                       <div class="col-md-10">
-                        <input type="text" name="produksi" class="form-control " />
+                        <input type="text" name="produksi" class="form-control "  value="<?php echo $datacd->produksi; ?>" />
                       </div>
                     </div>
                   
@@ -306,7 +310,7 @@
                       <label class="col-md-2">tanggal rilis</label>
                       <div class="col-md-10">
                     <div class="input-group date" data-provide="datepicker">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control"  value="<?php echo $datacd->tanggal_rilis; ?>">
                       <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th"></span>
                       </div>
@@ -320,48 +324,48 @@
                        <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">tahun</label>
                       <div class="col-md-10">
-                        <input type="number" name="tahun" class="form-control " />
+                        <input type="number" name="tahun" class="form-control "  value="<?php echo $datacd->tahun; ?>" />
                       </div>
                     </div>
 
                         <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">negara</label>
                       <div class="col-md-10">
-                        <input type="text" name="negara" class="form-control " />
+                        <input type="text" name="negara" class="form-control "  value="<?php echo $datacd->negara; ?>"/>
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">durasi</label>
                       <div class="col-md-10">
-                        <input type="number" name="durasi" class="form-control " />
+                        <input type="number" name="durasi" class="form-control "  value="<?php echo $datacd->durasi; ?>" />
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">rating</label>
                       <div class="col-md-10">
-                        <input type="number" name="rating" class="form-control " />
+                        <input type="number" name="rating" class="form-control " value="<?php echo $datacd->rating; ?>" />
                       </div>
                     </div>
                 <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">sinopsis</label>
                       <div class="col-md-10">
-                        <input type="text" name="sinopsis" class="form-control " />
+                        <input type="text" name="sinopsis" class="form-control "  value="<?php echo $datacd->sinopsis; ?>" />
                       </div>
                     </div>  
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Stok</label>
                       <div class="col-md-10">
-                        <input type="number" name="stok" class="form-control " />
+                        <input type="number" name="stok" class="form-control "  value="<?php echo $datacd->stok; ?>"/>
                       </div>
                     </div>
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Status</label>
                       <div class="col-md-10">
-                        <input type="text" name="status" class="form-control " />
+                        <input type="text" name="status" class="form-control "  value="<?php echo $datacd->status; ?>"/>
                       </div>
                     </div>                
                     <div>
-                      <button type="submit" class="btn btn-primary " style="margin-left: 330px;">Submit</button>
+                      <button type="submit" class="btn btn-primary " style="margin-left: 330px;">simpan</button>
                     </div>
 
                   </form>

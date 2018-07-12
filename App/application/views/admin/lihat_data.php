@@ -209,7 +209,7 @@
                             <td><?php echo $row->status; ?></td>
                             <td class="text-center">
                               <div class="btn-group">
-                                <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/tambah_cd/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
+                                <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/ubah_cd/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
                                 <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
                               </div>
                             </td>

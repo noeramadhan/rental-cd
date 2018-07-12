@@ -45,13 +45,23 @@ class Login extends CI_Controller{
 	function edit_cd(){
 
 		 if(isset($_POST['submit'])){
-            $data = array(
-                'id'        =>  $this->input->post('id'),
-                'nama'      =>  $this->input->post('nama'),
-                'tipe'     =>  $this->input->post('tipe'),
-                'harga'      =>  $this->input->post('harga'),
-                'stok'     =>  $this->input->post('stok'));
-            $update =  $this->curl->simple_post($this->API.'/produk', $data, array(CURLOPT_BUFFERSIZE => 10)); 
+          $data = array(
+				'nama'      =>  $this->input->post('nama'),
+				'genre'     =>  $this->input->post('genre'),
+				'sutradara'      =>  $this->input->post('sutradara'),
+				'produksi'      =>  $this->input->post('produksi'),
+				'tanggal_rilis'      =>  $this->input->post('tanggal_rilis'),
+				'tahun'      =>  $this->input->post('tahun'),
+				'negara'      =>  $this->input->post('negara'),
+				'durasi'      =>  $this->input->post('durasi'),
+				'rating'      =>  $this->input->post('rating'),
+				'sinopsis'      =>  $this->input->post('sinopsis'),
+				'stok'      =>  $this->input->post('stok'),
+				'status'     =>  $this->input->post('status')
+			);
+
+            $update =  $this->curl->simple_post($this->API.'cds', $data, array(CURLOPT_BUFFERSIZE => 10)); 
+
             if($update)
             {
                 $this->session->set_flashdata('hasil','Ubah Data Berhasil');
@@ -59,12 +69,12 @@ class Login extends CI_Controller{
             {
                $this->session->set_flashdata('hasil','Ubah Data Gagal');
             }
-            redirect('produk');
+           redirect('admin/lihat_data');
         }else{
             $params = array('id'    =>  $this->uri->segment(3));
             $data['title'] = "Ubah Data";
-            $produk = json_decode($this->curl->simple_get($this->API.'/produk',$params));
-            $data['dataproduk'] = $produk[0];
+            $produk = json_decode($this->curl->simple_get($this->API.'cds',$params));
+            $data['datacd'] = $produk[0];
             $this->load->view('admin/CD',$data);
         }
     }
