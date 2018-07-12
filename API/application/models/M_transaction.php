@@ -47,7 +47,7 @@ class M_transaction extends CI_Model{
 
     public function kembali($id,$status){
         // return $this->db->query("UPDATE 'transaksi' SET 'status' = $status WHERE 'id' = $id")->result_array();
-        return $this->db->where('id',$id)->update($this->transaction,array('status'=>$status));
+        return $this->db->where('id',$id)->update($this->transaction,$data);
     }
 
     public function peminjaman_create($data){

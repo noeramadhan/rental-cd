@@ -80,11 +80,12 @@ class UserDashboard extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$data = array(
 			'id' => $id,
+			'id_customer' => "smith",
 			'status' => 1
 		);
 		var_dump($data);
 		$cd = json_decode($this->curl->simple_post($this->API.'transactions/kembali/',$data));
 		var_dump($cd);
-		// redirect('userdashboard/transaksi');
+		redirect('userdashboard/transaksi');
 	}
 }

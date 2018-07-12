@@ -52,8 +52,12 @@ class Transactions extends REST_Controller {
     
     public function kembali_post(){
         $id = $this->post('id');
-        $status = $this->post('status');
-        $transaction = $this->m_transaction->kembali($id,$status);
+        $data = array(
+            'id' => $id,
+            'id_customer' => $this->post('id_customer'),
+            'status' => $this->post('status')
+        );
+        $transaction = $this->m_transaction->kembali($id,$data);
         $this->respone($transaction,200);
     }
     
