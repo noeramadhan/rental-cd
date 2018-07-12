@@ -5,6 +5,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <title><?php echo $title; ?></title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 3 | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
@@ -278,7 +279,7 @@
                   
                 </div>
                 <div><br />
-                  <form action="<?php echo base_url()."index.php/login/edit_cd"; ?>" method="post" enctype="multipart/form-data">
+                  <form action="<?php echo base_url()."index.php/login/edit_cd"; ?>" method="post" enctype="application/x-www-form-urlencoded">
                       <input type="hidden" name="id"  value="<?php echo $datacd->id; ?>" />
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">Nama <span class="required">*</span></label>
@@ -310,7 +311,7 @@
                       <label class="col-md-2">tanggal rilis</label>
                       <div class="col-md-10">
                     <div class="input-group date" data-provide="datepicker">
-                      <input type="text" class="form-control"  value="<?php echo $datacd->tanggal_rilis; ?>">
+                      <input type="text" name="tanggal_rilis" class="form-control"  value="<?php echo $datacd->tanggal_rilis; ?>">
                       <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th"></span>
                       </div>
@@ -365,7 +366,7 @@
                       </div>
                     </div>                
                     <div>
-                      <button type="submit" class="btn btn-primary " style="margin-left: 330px;">simpan</button>
+                      <button type="submit" name="submit" class="btn btn-success " style="margin-left: 330px;">simpan</button>
                     </div>
 
                   </form>

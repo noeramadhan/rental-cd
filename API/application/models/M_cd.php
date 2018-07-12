@@ -25,16 +25,20 @@ class M_cd extends CI_Model{
 
     public function update($id,$data){
     	if(isset($id) && isset($data)){
-    		return $this->db->update($this->cd,$data);
+    		return $this->db->where('id',$id)->update($this->cd,$data);
     	}
     	return "ERROR";
     }
 
     public function delete($id){
-        if(isset($id)){
-            return $this->db->where('id',$id)->delete($this->table);
+        $this->db->where('id', $id);
+        $query = $this->db->delete($this->cd);
+        var_dump($query);
+        if($this->db->affected_rows() == '1'){
+            return true;
+        }else{
+            return false;
         }
-        return "ERROR";
     }
     
     public function search($key,$val){

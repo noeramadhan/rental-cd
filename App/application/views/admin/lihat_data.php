@@ -155,6 +155,7 @@
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
+         <h1 style="color: red ; margin-left: 500px;" class="col-md-4;"> data CD</h1>
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -209,8 +210,126 @@
                             <td><?php echo $row->status; ?></td>
                             <td class="text-center">
                               <div class="btn-group">
-                                <a title="Ubah" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/ubah_cd/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
-                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
+                                <a title="edit_cd" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/edit_cd/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
+                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_cd/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                          <?php  endforeach;?>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<br><br>
+
+          <div class="content-wrapper">
+            <h1 style="color: red ; margin-left: 500px;" class="col-md-4;"> data customers</h1>
+            
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box">
+                <div class="box-body">
+                  <?php if($this->session->flashdata('hasil')){ ?>
+                    <div class="alert alert-info">
+                      <?php echo $this->session->flashdata('hasil'); ?>
+                    </div>
+                  <?php } ?>
+
+                  <div style="padding-bottom: 20px;">
+                    <a href="<?php echo base_url().'index.php/login/edit_transaksi/'; ?>" class="btn btn-info" role="button">
+                      <i class="fa fa-plus"></i> Tambah Data
+                    </a>
+                  </div>
+                  <div class="table-responsive">
+                    <table id="datatable" class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th style="width: 15%; text-align: center;">username </th>
+                          <th style="width: 15%; text-align: center;">password</th>
+                          <th style="width: 15%; text-align: center;">nama</th>
+                          <th style="width: 15%; text-align: center;">email</th>
+                          <th style="width: 15%; text-align: center;">alamat</th>
+                          <th style="width: 15%; text-align: center;">no hp</th>
+                         
+                          <th style="width: 15%; text-align: center;">Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php foreach($datacus as $row): ?>
+                          <tr>
+                            <td><?php echo $row->username; ?></td>
+                            <td><?php echo $row->password; ?></td>
+                            <td><?php echo $row->nama; ?></td>
+                             <td><?php echo $row->email; ?></td>
+                              <td><?php echo $row->alamat; ?></td>
+                               <td><?php echo $row->no_hp; ?></td>
+                            
+                            <td class="text-center">
+                              <div class="btn-group">
+                                <a title="edit_cd" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/edit_customer/'.$row->username; ?>"><i class="fas fa-pencil-alt"></i></a>
+                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_cd/'.$row->username; ?>"><i class="fas fa-trash"></i></a>
+                              </div>
+                            </td>
+                          </tr>
+                          <?php  endforeach;?>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <br><br>
+        <div class="content-wrapper">
+            <h1 style="color: red ; margin-left: 500px;" class="col-md-4;"> data transaksi</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box">
+                <div class="box-body">
+                  <?php if($this->session->flashdata('hasil')){ ?>
+                    <div class="alert alert-info">
+                      <?php echo $this->session->flashdata('hasil'); ?>
+                    </div>
+                  <?php } ?>
+
+                  <div style="padding-bottom: 20px;">
+                    <a href="<?php echo base_url().'index.php/login/edit_transaksi/'; ?>" class="btn btn-info" role="button">
+                      <i class="fa fa-plus"></i> Tambah Data
+                    </a>
+                  </div>
+                  <div class="table-responsive">
+                    <table id="datatable" class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th style="width: 5%; text-align: center;">No</th>
+                          <th style="width: 15%; text-align: center;">tanggal pinjam</th>
+                          <th style="width: 15%; text-align: center;">tanggal kembali</th>
+                          <th style="width: 15%; text-align: center;">status</th>
+                         
+                          <th style="width: 15%; text-align: center;">Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php foreach($datatrans as $row): ?>
+                          <tr>
+                            <td class="text-center"><?php echo $row->id; ?></td>
+                            <td><?php echo $row->tanggal_pinjam; ?></td>
+                            <td><?php echo $row->tanggal_kembali; ?></td>
+                            <td><?php echo $row->status; ?></td>
+                            
+                            <td class="text-center">
+                              <div class="btn-group">
+                                <a title="edit_cd" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/edit_customer/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
+                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_cd/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
                               </div>
                             </td>
                           </tr>
