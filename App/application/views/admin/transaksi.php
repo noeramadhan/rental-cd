@@ -274,7 +274,8 @@
                   <div class="clearfix"></div>
                 </div>
                 <div><br />
-                  <form action="<?php echo base_url()."index.php/produk/tambah"; ?>" method="post" enctype="multipart/form-data">
+                  <form action="<?php echo base_url()."index.php/login/edit_transaksi"; ?>" method="post" enctype="multipart/form-data">
+                   
                     <div class="row" style="padding-bottom: 10px;">
                       <label class="col-md-2">tgl pinjam</label>
                       <div class="col-md-10">
