@@ -164,6 +164,18 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+               <li class="nav-item">
+                <a href="<?=base_url('index.php/login/tambah_cd');?>" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>tambah CD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('index.php/login/tambah_user');?>" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>tambah user</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="<?=base_url('index.php/login/edit_cd');?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
@@ -210,6 +222,12 @@
                 <a href="<?=base_url('index.php/login/edit_user');?>" " class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>EDIT USER</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('index.php/login/lihat_data');?>" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p> LIHAT DATA</p>
                 </a>
               </li>
             </ul>

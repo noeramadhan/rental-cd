@@ -24,7 +24,7 @@ class M_transaction extends CI_Model{
 
     public function update($id,$data){
     	if(isset($id) && isset($data)){
-    		return $this->db->update($this->transaction,$data);
+    		return $this->db->where('id',$id)->update($this->transaction,$data);
     	}
     	return "ERROR";
     }
