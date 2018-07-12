@@ -273,7 +273,7 @@
                             <td class="text-center">
                               <div class="btn-group">
                                 <a title="edit_cd" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/edit_customer/'.$row->username; ?>"><i class="fas fa-pencil-alt"></i></a>
-                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_cd/'.$row->username; ?>"><i class="fas fa-trash"></i></a>
+                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_customers/'.$row->username; ?>"><i class="fas fa-trash"></i></a>
                               </div>
                             </td>
                           </tr>
@@ -328,8 +328,8 @@
                             
                             <td class="text-center">
                               <div class="btn-group">
-                                <a title="edit_cd" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/edit_customer/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
-                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_cd/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
+                                <a title="edit_transaksi" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/edit_transaksi/'.$row->id; ?>"><i class="fas fa-pencil-alt"></i></a>
+                                <a title="Hapus" class="btn btn-sm btn-default" href="<?php echo base_url().'index.php/login/hapus_customers/'.$row->id; ?>"><i class="fas fa-trash"></i></a>
                               </div>
                             </td>
                           </tr>

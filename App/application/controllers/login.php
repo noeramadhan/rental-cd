@@ -137,6 +137,42 @@ class Login extends CI_Controller{
         }
 
 	}
+	function hapus_customers(){
+		$username = $this->uri->segment(3);
+		 if(empty($username)){
+             redirect('login/lihat_data');
+        }else{
+        	var_dump($username);
+            $delete =  $this->curl->simple_delete($this->API.'customers', array('username'=>$username)); 
+            var_dump($delete);
+            if($delete)
+            {
+                $this->session->set_flashdata('hasil','Hapus Data Berhasil');
+            }else
+            {
+               $this->session->set_flashdata('hasil','Hapus Data Gagal');
+            }
+          redirect('login/lihat_data');
+        }
+    }
+        function hapus_transaksi(){
+		$id = $this->uri->segment(3);
+		 if(empty($id)){
+             redirect('login/lihat_data');
+        }else{
+        	var_dump($id);
+            $delete =  $this->curl->simple_delete($this->API.'transactions', array('id'=>$id)); 
+            var_dump($delete);
+            if($delete)
+            {
+                $this->session->set_flashdata('hasil','Hapus Data Berhasil');
+            }else
+            {
+               $this->session->set_flashdata('hasil','Hapus Data Gagal');
+            }
+          redirect('login/lihat_data');
+        }
+    }
 	function tambah_user(){
 		$this->load->view('admin/tambah_user');	
 
@@ -158,6 +194,33 @@ class Login extends CI_Controller{
 
 	}
 	function edit_transaksi(){
+		 if(isset($_POST['submit'])){
+		  $id = $this->input->post('id');
+          $data = array(
+          		'id' => $id,
+				'id customer'      =>  $this->input->post('id_customer'),
+				'tanggal pinjam'      =>  $this->input->post('nama'),
+				'tanggal_kembali'     =>  $this->input->post('tanggal_kembali'),
+				'status'     =>  $this->input->post('status')
+			);
+          	var_dump($data);
+            $update =  $this->curl->simple_post($this->API.'transactions', $data, array(CURLOPT_BUFFERSIZE => 10)); 
+            var_dump($update);
+            if($update)
+            {
+                $this->session->set_flashdata('hasil','Ubah Data Berhasil');
+            }else
+            {
+               $this->session->set_flashdata('hasil','Ubah Data Gagal');
+            }
+         redirect('login/lihat_data');
+        }else{
+            $params = array('id' =>  $this->uri->segment(3));
+            $data['title'] = "Ubah Data";
+            $produk = json_decode($this->curl->simple_get($this->API.'cds',$params));
+            $data['datacd'] = $produk[0];
+            $this->load->view('admin/transaksi',$data);
+        }
 		$this->load->view('admin/transaksi.php');	
 
 	}
@@ -176,7 +239,4 @@ class Login extends CI_Controller{
 
 	}
 	
-
-
-
 }
