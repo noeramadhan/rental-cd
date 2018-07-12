@@ -29,10 +29,10 @@ class Transactions extends REST_Controller {
     public function transaction_post(){
     	$id = $this->post('id');
         $data = array(
-            'id_customer' => $this->put('customer'),
-            'tanggal_pinjam' => $this->put('tangal_pinjam'),
-            'tanggal_kembali' => $this->put('tanggal_kembali'),
-            'status' => $this->put('status')
+            'id_customer' => $this->post('customer'),
+            'tanggal_pinjam' => $this->post('tangal_pinjam'),
+            'tanggal_kembali' => $this->post('tanggal_kembali'),
+            'status' => $this->post('status')
         );
     	$transaction = $this->m_transaction->update($id,$data);
     	$this->response($data, 200);
@@ -48,6 +48,13 @@ class Transactions extends REST_Controller {
         $username = $this->get('username');
         $transaction = $this->m_transaction->search($username);
         $this->response($transaction, 200);
+    }
+    
+    public function kembali_post(){
+        $id = $this->post('id');
+        $status = $this->post('status');
+        $transaction = $this->m_transaction->kembali($id,$status);
+        $this->respone($transaction,200);
     }
     
 }

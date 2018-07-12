@@ -45,6 +45,11 @@ class M_transaction extends CI_Model{
         return "Username Not Set";
     }
 
+    public function kembali($id,$status){
+        // return $this->db->query("UPDATE 'transaksi' SET 'status' = $status WHERE 'id' = $id")->result_array();
+        return $this->db->where('id',$id)->update($this->transaction,array('status'=>$status));
+    }
+
     public function peminjaman_create($data){
         if(isset($data)){
             return $this->db->insert($this->peminjaman,$data);

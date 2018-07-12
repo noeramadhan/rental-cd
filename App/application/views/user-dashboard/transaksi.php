@@ -57,7 +57,8 @@
                   <p>Transaksi</p>
                 </a>
               </li>
-              <li class="nav-item has-treeview menu-close">
+              
+<!--               <li class="nav-item has-treeview menu-close">
                 <a href="<?=base_url();?>index.php/userdashboard/peminjaman" class="nav-link">
                   <i class="nav-icon fa fa-history"></i>
                   <p>
@@ -79,7 +80,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <li class="nav-item">
                 <a href="<?=base_url();?>index.php/userdashboard/setting" class="nav-link">
@@ -115,7 +116,7 @@
               <div class="card-header">
                 <h3 class="card-title">Simple Full Width Table</h3>
 
-                <div class="card-tools">
+<!--                 <div class="card-tools">
                   <ul class="pagination pagination-sm m-0 float-right">
                     <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -123,7 +124,7 @@
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
@@ -157,9 +158,7 @@
                     }
                     ?>
                     <td>
-                      <a href="<?=base_url();?>index.php/userdashboard/detailtransaksi">
-                        <i class="fa fa-eye text-primary"></i>
-                      </a>
+                      <a href="<?=base_url()?>index.php/userdashboard/kembalikan/<?=$data->id;?>">Kembalikan</a>
                     </td>
                   </tr>
                   <?php

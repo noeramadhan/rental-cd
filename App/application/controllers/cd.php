@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class cd extends CI_Controller {
+class CD extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,9 +19,10 @@ class cd extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	var $API ="";
+
 	function __construct() {
 		parent::__construct();
-		$this->API = "http://localhost:8000/rental-cd/API/index.php/";
+		$this->API = "http://localhost/rental-cd/API/index.php/";
 	}
 
 	public function index(){
