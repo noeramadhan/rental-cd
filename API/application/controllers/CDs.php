@@ -25,9 +25,7 @@ class CDs extends REST_Controller {
             'status' => $this->put('status')
 
         );
-        var_dump($data);
     	$cd = $this->m_cd->create($data);
-        var_dump($cd);
     	$this->response($cd,200);
     }
 
@@ -59,8 +57,14 @@ class CDs extends REST_Controller {
 
     public function cd_delete(){
     	$id = $this->delete('id');
+        var_dump($id);
     	$cd = $this->m_cd->delete($id);
-    	$this->response($cd, 200);
+        var_dump($cd);
+        if ($cd) {
+            $this->response(array('status' => 'success'), 201);
+        } else {
+            $this->response(array('status' => 'fail', 502));
+        }
     }
     
     public function search_get(){

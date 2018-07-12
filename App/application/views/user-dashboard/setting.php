@@ -44,12 +44,10 @@
         <div class="sidebar">
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="<?=$user->photo;?>" class="img-circle elevation-2" alt="User Image">
+              <img src="<?=$user->photo?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block">
-                <?php echo $user->nama;?>
-              </a>
+              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block"><?=$user->nama?></a>
             </div>
           </div>
 
@@ -61,7 +59,8 @@
                   <p>Transaksi</p>
                 </a>
               </li>
-              <li class="nav-item has-treeview menu-close">
+              
+<!--               <li class="nav-item has-treeview menu-close">
                 <a href="<?=base_url();?>index.php/userdashboard/peminjaman" class="nav-link">
                   <i class="nav-icon fa fa-history"></i>
                   <p>
@@ -83,7 +82,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <li class="nav-item">
                 <a href="<?=base_url();?>index.php/userdashboard/setting" class="nav-link active">

@@ -42,10 +42,10 @@
         <div class="sidebar">
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="<?=base_url();?>assets/tle/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+              <img src="<?=$user->photo?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block">Johar Putra</a>
+              <a href="<?=base_url();?>index.php/userdashboard/setting" class="d-block"><?=$user->nama?></a>
             </div>
           </div>
 
@@ -57,7 +57,8 @@
                   <p>Transaksi</p>
                 </a>
               </li>
-              <li class="nav-item has-treeview menu-close">
+              
+<!--               <li class="nav-item has-treeview menu-close">
                 <a href="<?=base_url();?>index.php/userdashboard/peminjaman" class="nav-link">
                   <i class="nav-icon fa fa-history"></i>
                   <p>
@@ -79,7 +80,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <li class="nav-item">
                 <a href="<?=base_url();?>index.php/userdashboard/setting" class="nav-link">
@@ -115,7 +116,7 @@
               <div class="card-header">
                 <h3 class="card-title">Simple Full Width Table</h3>
 
-                <div class="card-tools">
+<!--                 <div class="card-tools">
                   <ul class="pagination pagination-sm m-0 float-right">
                     <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -123,7 +124,7 @@
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
@@ -136,19 +137,33 @@
                     <th style="width: 40px">Status</th>
                     <th>Aksi</th>
                   </tr>
+                  <?php
+                  foreach($transaksi as $data){
+                  ?>
                   <tr>
-                    <td>1</td>
-                    <td>Johar Putra</td>
-                    <td>10/07/2018</td>
-                    <td>13/07/2018</td>
-                    <td><span class="badge bg-primary">Pinjam</span></td>
+                    <td><?=$data->id;?></td>
+                    <td><?=$data->id_customer;?></td>
+                    <td><?=$data->tanggal_pinjam;?></td>
+                    <td><?=$data->tanggal_kembali;?></td>
+                    <?php
+
+                    if($data->status==0){
+                      ?>
+                        <td><span class="badge bg-primary">Pinjam</span></td>
+                      <?php
+                    }else{
+                      ?>
+                        <td><span class="badge bg-success">Kembali</span></td>
+                      <?php
+                    }
+                    ?>
                     <td>
-                      <a href="<?=base_url();?>index.php/userdashboard/detailtransaksi">
-                        <i class="fa fa-eye text-primary"></i>
-                      </a>
+                      <a href="<?=base_url()?>index.php/userdashboard/kembalikan/<?=$data->id;?>">Kembalikan</a>
                     </td>
                   </tr>
-
+                  <?php
+                  }
+                  ?>
                 </table>
               </div>
               <!-- /.card-body -->

@@ -24,7 +24,7 @@ class M_transaction extends CI_Model{
 
     public function update($id,$data){
     	if(isset($id) && isset($data)){
-    		return $this->db->update($this->transaction,$data);
+    		return $this->db->where('id',$id)->update($this->transaction,$data);
     	}
     	return "ERROR";
     }
@@ -40,9 +40,14 @@ class M_transaction extends CI_Model{
 
     public function search($username){
         if(isset($username)){
-            return $this->db->where('id_customer',$username)->get($this->table)->result();
+            return $this->db->where('id_customer',$username)->get($this->transaction)->result();
         }
         return "Username Not Set";
+    }
+
+    public function kembali($id,$status){
+        // return $this->db->query("UPDATE 'transaksi' SET 'status' = $status WHERE 'id' = $id")->result_array();
+        return $this->db->where('id',$id)->update($this->transaction,$data);
     }
 
     public function peminjaman_create($data){

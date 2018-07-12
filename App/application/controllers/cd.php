@@ -47,9 +47,7 @@ class cd extends CI_Controller {
 		}
 
 	public function login(){
-		$data['login'] = json_decode($this->curl->simple_get($this->API.'cds'));
-		$data['title'] = "Data CD";
-		$this->load->view('login',$data);
+		$this->load->view('login');
 	}
 		
 }

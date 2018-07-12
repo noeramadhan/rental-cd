@@ -29,10 +29,10 @@ class Transactions extends REST_Controller {
     public function transaction_post(){
     	$id = $this->post('id');
         $data = array(
-            'id_customer' => $this->put('customer'),
-            'tanggal_pinjam' => $this->put('tangal_pinjam'),
-            'tanggal_kembali' => $this->put('tanggal_kembali'),
-            'status' => $this->put('status')
+            'id_customer' => $this->post('customer'),
+            'tanggal_pinjam' => $this->post('tangal_pinjam'),
+            'tanggal_kembali' => $this->post('tanggal_kembali'),
+            'status' => $this->post('status')
         );
     	$transaction = $this->m_transaction->update($id,$data);
     	$this->response($data, 200);
@@ -49,74 +49,16 @@ class Transactions extends REST_Controller {
         $transaction = $this->m_transaction->search($username);
         $this->response($transaction, 200);
     }
-
-    public function peminjaman_put(){
-        $data = array(
-            'id_transaksi' => $this->put('transaksi'),
-            'id_customer' => $this->put('customer'),
-            'id_cd' => $this->put('cd'),
-            'tanggal_pinjam' => $this->put('tanggal_pinjam')
-        );
-        $transaction = $this->m_transaction->peminjaman_create($data);
-        $this->response($transaction, 200);
-    }
-
-    public function peminjaman_get(){
-        $id = $this->get('id');
-        $transaction = $this->m_transaction->peminjaman_read($id);
-        $this->response($transaction, 200);
-    }
-
-    public function peminjaman_post(){
+    
+    public function kembali_post(){
         $id = $this->post('id');
         $data = array(
-            'id_transaksi' => $this->put('transaksi'),
-            'id_customer' => $this->put('customer'),
-            'id_cd' => $this->put('cd'),
-            'tanggal_pinjam' => $this->put('tanggal_pinjam')
+            'id' => $id,
+            'id_customer' => $this->post('id_customer'),
+            'status' => $this->post('status')
         );
-        $transaction = $this->m_transaction->peminjaman_update($id,$data);
-        $this->response($transaction, 200);
+        $transaction = $this->m_transaction->kembali($id,$data);
+        $this->respone($transaction,200);
     }
-
-    public function peminjaman_delete(){
-        $id = $this->delete('id');
-        $transaction = $this->m_transaction->peminjaman_delete($id);
-        $this->response($transaction, 200);
-    }
-
-    public function pengembalian_put(){
-        $data = array(
-            'id_transaksi' => $this->put('transaksi'),
-            'id_customer' => $this->put('customer'),
-            'id_cd' => $this->put('cd'),
-            'tanggal_kembali' => $this->put('tanggal_kembali')
-        );
-        $transaction = $this->m_transaction->pengembalian_create($data);
-        $this->response($transaction, 200);
-    }
-
-    public function pengembalian_get(){
-        $id = $this->get('id');
-        $transaction = $this->m_transaction->pengembalian_read($id);
-        $this->response($transaction, 200);
-    }
-
-    public function pengembalian_post(){
-        $id = $this->post('id');
-        $data = array(
-            'id_transaksi' => $this->put('transaksi'),
-            'id_customer' => $this->put('customer'),
-            'id_cd' => $this->put('cd'),
-            'tanggal_kembali' => $this->put('tanggal_kembali')
-        );
-        $transaction = $this->m_transaction->pengembalian_update($id,$data);
-        $this->response($transaction, 200);
-    }
-
-    public function pengembalian_delete(){
-        $id = $this->delete('id');
-        $transaction = $this->m_transaction->pengembalian_delete($id);
-        $this->response($transaction, 200);
-    }
+    
 }
